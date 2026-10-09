@@ -30,7 +30,9 @@
       text-decoration: none;
     }
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       position: fixed;
@@ -57,10 +59,12 @@
       font-weight: 800;
       letter-spacing: 5px;
     }
+
     .logo img {
-    height: 75px;
-    width: auto;
-    display: block;
+      height: 75px;
+      width: auto;
+      display: block;
+    }
 
     .logo span {
       display: block;
@@ -89,7 +93,9 @@
       font-weight: bold;
     }
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       min-height: 100vh;
@@ -98,8 +104,13 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+
       background:
-        radial-gradient(circle at 50% 35%, rgba(30, 105, 120, 0.13), transparent 35%),
+        radial-gradient(
+          circle at 50% 35%,
+          rgba(30, 105, 120, 0.13),
+          transparent 35%
+        ),
         #f5f0e8;
     }
 
@@ -165,7 +176,9 @@
       transform: translateY(-2px);
     }
 
-    /* SECTIONS */
+    /* =========================
+       SECTIONS
+    ========================= */
 
     section {
       padding: 100px 25px;
@@ -188,7 +201,9 @@
       margin-bottom: 50px;
     }
 
-    /* CONCEPTO */
+    /* =========================
+       CONCEPTO
+    ========================= */
 
     .concepto {
       background: #102f3a;
@@ -219,7 +234,9 @@
       color: #c8d4d6;
     }
 
-    /* CARTA */
+    /* =========================
+       CARTA
+    ========================= */
 
     .carta-grid {
       display: grid;
@@ -249,7 +266,9 @@
       white-space: nowrap;
     }
 
-    /* PEDIDOS */
+    /* =========================
+       PEDIDOS
+    ========================= */
 
     .pedidos {
       background: #dbe7e5;
@@ -270,7 +289,9 @@
       color: #50666b;
     }
 
-    /* UBICACIÓN */
+    /* =========================
+       UBICACIÓN
+    ========================= */
 
     .ubicacion {
       display: grid;
@@ -289,7 +310,9 @@
       margin-bottom: 5px;
     }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       background: #102f3a;
@@ -307,7 +330,9 @@
       opacity: 0.7;
     }
 
-    /* MÓVIL */
+    /* =========================
+       MÓVIL
+    ========================= */
 
     @media (max-width: 750px) {
 
@@ -338,30 +363,55 @@
         font-size: 38px;
       }
     }
+
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header>
+
     <nav>
+
       <a href="#" class="logo">
-      <img src="logo-pacifico-header.png" alt="PACÍFICO Cocina Ecuatoriana">
+        <img
+          src="logo-pacifico-header.png"
+          alt="PACÍFICO Cocina Ecuatoriana"
+        >
       </a>
 
       <div class="menu">
-        <a href="#concepto">Nosotros</a>
-        <a href="#carta">Carta</a>
-        <a href="#ubicacion">Ubicación</a>
-        <a href="#pedidos" class="pedido-btn">Pedir online</a>
+
+        <a href="#concepto">
+          Nosotros
+        </a>
+
+        <a href="#carta">
+          Carta
+        </a>
+
+        <a href="#ubicacion">
+          Ubicación
+        </a>
+
+        <a href="#pedidos" class="pedido-btn">
+          Pedir online
+        </a>
+
       </div>
+
     </nav>
+
   </header>
 
 
-  <!-- HERO -->
+  <!-- =========================
+       HERO
+  ========================= -->
 
   <section class="hero">
 
@@ -371,9 +421,13 @@
         Cocina ecuatoriana
       </div>
 
-      <h1>PACÍFICO</h1>
+      <h1>
+        PACÍFICO
+      </h1>
 
-      <h2>COCINA ECUATORIANA</h2>
+      <h2>
+        COCINA ECUATORIANA
+      </h2>
 
       <p>
         Sabores de Ecuador, producto y memoria.
@@ -381,6 +435,7 @@
       </p>
 
       <div class="hero-buttons">
+
         <a href="#carta" class="btn btn-primary">
           VER CARTA
         </a>
@@ -388,6 +443,7 @@
         <a href="#pedidos" class="btn btn-secondary">
           PEDIR ONLINE
         </a>
+
       </div>
 
     </div>
@@ -395,7 +451,9 @@
   </section>
 
 
-  <!-- CONCEPTO -->
+  <!-- =========================
+       CONCEPTO
+  ========================= -->
 
   <section class="concepto" id="concepto">
 
@@ -410,34 +468,52 @@
       </h2>
 
       <p class="section-intro">
-        PACÍFICO nace de una idea sencilla: llevar la cocina ecuatoriana
-        a la mesa con identidad, producto y respeto por sus sabores.
+        PACÍFICO nace de una idea sencilla:
+        llevar la cocina ecuatoriana a la mesa
+        con identidad, producto y respeto por sus sabores.
       </p>
 
       <div class="concept-grid">
 
         <div class="concept-card">
-          <h3>Producto</h3>
+
+          <h3>
+            Producto
+          </h3>
+
           <p>
-            Ingredientes seleccionados y una cocina pensada para
-            respetar cada producto.
+            Ingredientes seleccionados y una cocina
+            pensada para respetar cada producto.
           </p>
+
         </div>
 
-        <div class="concept-card">
-          <h3>Identidad</h3>
-          <p>
-            Recetas ecuatorianas, memoria y sabores que cuentan
-            de dónde venimos.
-          </p>
-        </div>
 
         <div class="concept-card">
-          <h3>Pacífico</h3>
+
+          <h3>
+            Identidad
+          </h3>
+
           <p>
-            Una mirada contemporánea a una gastronomía llena de
-            costa, montaña, tradición y diversidad.
+            Recetas ecuatorianas, memoria y sabores
+            que cuentan de dónde venimos.
           </p>
+
+        </div>
+
+
+        <div class="concept-card">
+
+          <h3>
+            Pacífico
+          </h3>
+
+          <p>
+            Una mirada contemporánea a una gastronomía
+            llena de costa, montaña, tradición y diversidad.
+          </p>
+
         </div>
 
       </div>
@@ -447,7 +523,9 @@
   </section>
 
 
-  <!-- CARTA -->
+  <!-- =========================
+       CARTA
+  ========================= -->
 
   <section id="carta">
 
@@ -462,59 +540,140 @@
       </h2>
 
       <p class="section-intro">
-        Una selección de clásicos ecuatorianos y platos de PACÍFICO.
-        La carta podrá cambiar según producto y temporada.
+        Una selección de clásicos ecuatorianos y platos
+        de PACÍFICO. La carta podrá cambiar según
+        producto y temporada.
       </p>
+
 
       <div class="carta-grid">
 
-        <div class="plato">
-          <div>
-            <h3>Bolón ranchero</h3>
-            <p>Plátano verde, queso y proteína.</p>
-          </div>
-          <div class="precio">10 €</div>
-        </div>
 
         <div class="plato">
+
           <div>
-            <h3>Ceviche ecuatoriano</h3>
-            <p>Pescado, cítricos, cebolla y cilantro.</p>
+
+            <h3>
+              Bolón ranchero
+            </h3>
+
+            <p>
+              Plátano verde, queso y proteína.
+            </p>
+
           </div>
-          <div class="precio">10 €</div>
+
+          <div class="precio">
+            10 €
+          </div>
+
         </div>
 
-        <div class="plato">
-          <div>
-            <h3>Chaulafán ecuatoriano</h3>
-            <p>Arroz salteado al estilo ecuatoriano.</p>
-          </div>
-          <div class="precio">10 €</div>
-        </div>
 
         <div class="plato">
+
           <div>
-            <h3>Churrasco ecuatoriano</h3>
-            <p>Carne, patatas, huevo y acompañamientos.</p>
+
+            <h3>
+              Ceviche ecuatoriano
+            </h3>
+
+            <p>
+              Pescado, cítricos, cebolla y cilantro.
+            </p>
+
           </div>
-          <div class="precio">15 €</div>
+
+          <div class="precio">
+            10 €
+          </div>
+
         </div>
 
-        <div class="plato">
-          <div>
-            <h3>Maduro con queso</h3>
-            <p>Plátano maduro y queso.</p>
-          </div>
-          <div class="precio">—</div>
-        </div>
 
         <div class="plato">
+
           <div>
-            <h3>Guatita</h3>
-            <p>Receta tradicional ecuatoriana.</p>
+
+            <h3>
+              Chaulafán ecuatoriano
+            </h3>
+
+            <p>
+              Arroz salteado al estilo ecuatoriano.
+            </p>
+
           </div>
-          <div class="precio">—</div>
+
+          <div class="precio">
+            10 €
+          </div>
+
         </div>
+
+
+        <div class="plato">
+
+          <div>
+
+            <h3>
+              Churrasco ecuatoriano
+            </h3>
+
+            <p>
+              Carne, patatas, huevo y acompañamientos.
+            </p>
+
+          </div>
+
+          <div class="precio">
+            15 €
+          </div>
+
+        </div>
+
+
+        <div class="plato">
+
+          <div>
+
+            <h3>
+              Maduro con queso
+            </h3>
+
+            <p>
+              Plátano maduro y queso.
+            </p>
+
+          </div>
+
+          <div class="precio">
+            —
+          </div>
+
+        </div>
+
+
+        <div class="plato">
+
+          <div>
+
+            <h3>
+              Guatita
+            </h3>
+
+            <p>
+              Receta tradicional ecuatoriana.
+            </p>
+
+          </div>
+
+          <div class="precio">
+            —
+          </div>
+
+        </div>
+
 
       </div>
 
@@ -523,7 +682,9 @@
   </section>
 
 
-  <!-- PEDIDOS -->
+  <!-- =========================
+       PEDIDOS
+  ========================= -->
 
   <section class="pedidos" id="pedidos">
 
@@ -538,10 +699,16 @@
       </h2>
 
       <p>
-     Haz tu pedido directamente por WhatsApp. Te atenderemos y confirmaremos tu pedido.
+        Haz tu pedido directamente por WhatsApp.
+        Te atenderemos y confirmaremos tu pedido.
       </p>
 
-      <a href="https://wa.me/34685898134?text=Hola%20PAC%C3%8DFICO%2C%20quiero%20hacer%20un%20pedido." class="botón botón-primario" target="_blank">
+      <a
+        href="https://wa.me/34685898134?text=Hola%20PAC%C3%8DFICO%2C%20quiero%20hacer%20un%20pedido."
+        class="btn btn-primary"
+        target="_blank"
+        rel="noopener"
+      >
         PEDIR POR WHATSAPP
       </a>
 
@@ -550,7 +717,9 @@
   </section>
 
 
-  <!-- UBICACIÓN -->
+  <!-- =========================
+       UBICACIÓN
+  ========================= -->
 
   <section id="ubicacion">
 
@@ -572,21 +741,39 @@
 
       </div>
 
+
       <div>
 
         <div class="info-line">
-          <strong>📍 Ubicación</strong>
+
+          <strong>
+            📍 Ubicación
+          </strong>
+
           Caravaca de la Cruz, Murcia
+
         </div>
 
+
         <div class="info-line">
-          <strong>🕐 Horarios</strong>
+
+          <strong>
+            🕐 Horarios
+          </strong>
+
           Próximamente
+
         </div>
 
+
         <div class="info-line">
-          <strong>📲 Pedidos</strong>
+
+          <strong>
+            📲 Pedidos
+          </strong>
+
           Próximamente por WhatsApp
+
         </div>
 
       </div>
@@ -596,13 +783,20 @@
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
     <div class="logo">
+
       PACÍFICO
-      <span>COCINA ECUATORIANA</span>
+
+      <span>
+        COCINA ECUATORIANA
+      </span>
+
     </div>
 
     <p>
@@ -610,6 +804,7 @@
     </p>
 
   </footer>
+
 
 </body>
 </html>
