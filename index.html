@@ -37,7 +37,10 @@
         Helvetica,
         sans-serif;
 
-      background: #f5f0e8;
+      /* IMPORTANTE:
+         El fondo debe ser transparente
+         para poder ver la fotografía */
+      background: transparent;
 
       color: #102f3a;
 
@@ -72,9 +75,11 @@
 
       filter: blur(6px);
 
-      opacity: 0.20;
+      /* Intensidad de la fotografía */
+      opacity: 0.28;
 
-      z-index: -2;
+      /* IMPORTANTE */
+      z-index: 0;
 
       pointer-events: none;
 
@@ -82,7 +87,9 @@
     }
 
 
-    /* Capa crema para suavizar el fondo */
+    /* =========================
+       CAPA CREMA SOBRE LA FOTO
+    ========================= */
 
     body::after {
 
@@ -92,11 +99,24 @@
 
       inset: 0;
 
-      background: rgba(245, 240, 232, 0.45);
+      background:
+        rgba(245, 240, 232, 0.35);
 
-      z-index: -1;
+      /* IMPORTANTE */
+      z-index: 0;
 
       pointer-events: none;
+    }
+
+
+    /* Todo el contenido queda
+       por encima del fondo */
+
+    body > * {
+
+      position: relative;
+
+      z-index: 1;
     }
 
 
@@ -155,7 +175,9 @@
     }
 
 
-    /* LOGO */
+    /* =========================
+       LOGO
+    ========================= */
 
     .logo {
 
@@ -183,7 +205,9 @@
     }
 
 
-    /* MENU */
+    /* =========================
+       MENU
+    ========================= */
 
     .menu {
 
@@ -241,10 +265,9 @@
       position: relative;
 
       background:
-
         linear-gradient(
-          rgba(245, 240, 232, 0.35),
-          rgba(245, 240, 232, 0.35)
+          rgba(245, 240, 232, 0.25),
+          rgba(245, 240, 232, 0.25)
         ),
 
         radial-gradient(
@@ -372,7 +395,7 @@
         #102f3a;
 
       background:
-        rgba(255,255,255,0.35);
+        rgba(255,255,255,0.40);
     }
 
 
