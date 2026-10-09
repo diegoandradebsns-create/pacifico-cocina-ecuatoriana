@@ -75,17 +75,17 @@
 
       background-repeat: no-repeat;
 
-      /* Fondo mucho más nítido */
-      filter: blur(2px);
+      /* SIN DESENFOQUE */
+      filter: blur(0px);
 
-      /* Mayor presencia de la fotografía */
-      opacity: 0.32;
+      /* MÁS PRESENCIA DE LA FOTOGRAFÍA */
+      opacity: 0.42;
 
       z-index: 0;
 
       pointer-events: none;
 
-      transform: scale(1.03);
+      transform: scale(1.01);
     }
 
 
@@ -101,11 +101,10 @@
 
       inset: 0;
 
-      /* Antes estaba en 35%.
-         Ahora solo 18% */
+      /* CAPA CREMA MUCHO MÁS TRANSPARENTE */
 
       background:
-        rgba(245, 240, 232, 0.18);
+        rgba(245, 240, 232, 0.08);
 
       z-index: 0;
 
@@ -281,13 +280,13 @@
       background:
 
         linear-gradient(
-          rgba(245, 240, 232, 0.12),
-          rgba(245, 240, 232, 0.12)
+          rgba(245, 240, 232, 0.05),
+          rgba(245, 240, 232, 0.05)
         ),
 
         radial-gradient(
           circle at 50% 35%,
-          rgba(30, 105, 120, 0.10),
+          rgba(30, 105, 120, 0.06),
           transparent 40%
         );
     }
@@ -530,10 +529,10 @@
     #carta {
 
       background:
-        rgba(245, 240, 232, 0.62);
+        rgba(245, 240, 232, 0.55);
 
       backdrop-filter:
-        blur(2px);
+        blur(1px);
     }
 
 
@@ -629,7 +628,7 @@
     #ubicacion {
 
       background:
-        rgba(245, 240, 232, 0.62);
+        rgba(245, 240, 232, 0.55);
     }
 
 
