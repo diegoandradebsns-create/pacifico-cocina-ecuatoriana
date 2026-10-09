@@ -16,9 +16,9 @@
 
   <style>
 
-    /* =========================
+    /* ========================================
        RESET
-    ========================= */
+    ======================================== */
 
     * {
       box-sizing: border-box;
@@ -30,6 +30,11 @@
       scroll-behavior: smooth;
     }
 
+
+    /* ========================================
+       CUERPO
+    ======================================== */
+
     body {
 
       font-family:
@@ -37,9 +42,6 @@
         Helvetica,
         sans-serif;
 
-      /* IMPORTANTE:
-         El fondo debe ser transparente
-         para poder ver la fotografía */
       background: transparent;
 
       color: #102f3a;
@@ -52,9 +54,9 @@
     }
 
 
-    /* =========================
-       FONDO GENERAL PACÍFICO
-    ========================= */
+    /* ========================================
+       FONDO FOTOGRÁFICO
+    ======================================== */
 
     body::before {
 
@@ -73,12 +75,12 @@
 
       background-repeat: no-repeat;
 
-      filter: blur(6px);
+      /* Fondo mucho más nítido */
+      filter: blur(2px);
 
-      /* Intensidad de la fotografía */
-      opacity: 0.28;
+      /* Mayor presencia de la fotografía */
+      opacity: 0.32;
 
-      /* IMPORTANTE */
       z-index: 0;
 
       pointer-events: none;
@@ -87,9 +89,9 @@
     }
 
 
-    /* =========================
-       CAPA CREMA SOBRE LA FOTO
-    ========================= */
+    /* ========================================
+       CAPA SUAVE SOBRE LA FOTOGRAFÍA
+    ======================================== */
 
     body::after {
 
@@ -99,18 +101,21 @@
 
       inset: 0;
 
-      background:
-        rgba(245, 240, 232, 0.35);
+      /* Antes estaba en 35%.
+         Ahora solo 18% */
 
-      /* IMPORTANTE */
+      background:
+        rgba(245, 240, 232, 0.18);
+
       z-index: 0;
 
       pointer-events: none;
     }
 
 
-    /* Todo el contenido queda
-       por encima del fondo */
+    /* ========================================
+       CONTENIDO SOBRE EL FONDO
+    ======================================== */
 
     body > * {
 
@@ -128,9 +133,9 @@
     }
 
 
-    /* =========================
+    /* ========================================
        HEADER
-    ========================= */
+    ======================================== */
 
     header {
 
@@ -147,9 +152,11 @@
       background:
         rgba(245, 240, 232, 0.88);
 
-      backdrop-filter: blur(12px);
+      backdrop-filter:
+        blur(12px);
 
-      -webkit-backdrop-filter: blur(12px);
+      -webkit-backdrop-filter:
+        blur(12px);
 
       border-bottom:
         1px solid
@@ -165,7 +172,8 @@
 
       margin: auto;
 
-      padding: 5px 25px;
+      padding:
+        5px 25px;
 
       display: flex;
 
@@ -175,9 +183,9 @@
     }
 
 
-    /* =========================
+    /* ========================================
        LOGO
-    ========================= */
+    ======================================== */
 
     .logo {
 
@@ -205,9 +213,9 @@
     }
 
 
-    /* =========================
-       MENU
-    ========================= */
+    /* ========================================
+       MENÚ
+    ======================================== */
 
     .menu {
 
@@ -218,6 +226,13 @@
       align-items: center;
 
       font-size: 14px;
+    }
+
+
+    .menu a {
+
+      transition:
+        opacity 0.2s ease;
     }
 
 
@@ -233,7 +248,8 @@
 
       color: white;
 
-      padding: 11px 18px;
+      padding:
+        11px 18px;
 
       border-radius: 30px;
 
@@ -241,18 +257,16 @@
     }
 
 
-    /* =========================
+    /* ========================================
        HERO
-    ========================= */
+    ======================================== */
 
     .hero {
 
       min-height: 100vh;
 
       padding:
-        150px
-        25px
-        80px;
+        150px 25px 80px;
 
       display: flex;
 
@@ -265,14 +279,15 @@
       position: relative;
 
       background:
+
         linear-gradient(
-          rgba(245, 240, 232, 0.25),
-          rgba(245, 240, 232, 0.25)
+          rgba(245, 240, 232, 0.12),
+          rgba(245, 240, 232, 0.12)
         ),
 
         radial-gradient(
           circle at 50% 35%,
-          rgba(30, 105, 120, 0.13),
+          rgba(30, 105, 120, 0.10),
           transparent 40%
         );
     }
@@ -319,7 +334,7 @@
 
       text-shadow:
         0 2px 10px
-        rgba(255,255,255,0.45);
+        rgba(255, 255, 255, 0.45);
     }
 
 
@@ -344,13 +359,18 @@
 
       max-width: 600px;
 
-      margin: 30px auto;
+      margin:
+        30px auto;
 
       font-size: 17px;
 
       color: #48616a;
     }
 
+
+    /* ========================================
+       BOTONES HERO
+    ======================================== */
 
     .hero-buttons {
 
@@ -370,13 +390,15 @@
 
       display: inline-block;
 
-      padding: 15px 28px;
+      padding:
+        15px 28px;
 
       border-radius: 30px;
 
       font-weight: bold;
 
-      transition: 0.2s;
+      transition:
+        transform 0.2s ease;
     }
 
 
@@ -395,7 +417,7 @@
         #102f3a;
 
       background:
-        rgba(255,255,255,0.40);
+        rgba(255, 255, 255, 0.40);
     }
 
 
@@ -406,15 +428,14 @@
     }
 
 
-    /* =========================
+    /* ========================================
        SECCIONES
-    ========================= */
+    ======================================== */
 
     section {
 
       padding:
-        100px
-        25px;
+        100px 25px;
 
       position: relative;
     }
@@ -448,9 +469,9 @@
     }
 
 
-    /* =========================
+    /* ========================================
        CONCEPTO
-    ========================= */
+    ======================================== */
 
     .concepto {
 
@@ -482,7 +503,7 @@
 
       border-top:
         1px solid
-        rgba(255,255,255,0.35);
+        rgba(255, 255, 255, 0.35);
 
       padding-top: 25px;
     }
@@ -502,14 +523,14 @@
     }
 
 
-    /* =========================
+    /* ========================================
        CARTA
-    ========================= */
+    ======================================== */
 
     #carta {
 
       background:
-        rgba(245, 240, 232, 0.72);
+        rgba(245, 240, 232, 0.62);
 
       backdrop-filter:
         blur(2px);
@@ -531,9 +552,10 @@
 
       border-bottom:
         1px solid
-        rgba(16,47,58,0.2);
+        rgba(16, 47, 58, 0.20);
 
-      padding: 20px 0;
+      padding:
+        20px 0;
 
       display: flex;
 
@@ -565,9 +587,9 @@
     }
 
 
-    /* =========================
+    /* ========================================
        PEDIDOS
-    ========================= */
+    ======================================== */
 
     .pedidos {
 
@@ -600,14 +622,14 @@
     }
 
 
-    /* =========================
+    /* ========================================
        UBICACIÓN
-    ========================= */
+    ======================================== */
 
     #ubicacion {
 
       background:
-        rgba(245, 240, 232, 0.72);
+        rgba(245, 240, 232, 0.62);
     }
 
 
@@ -626,11 +648,12 @@
 
     .info-line {
 
-      padding: 18px 0;
+      padding:
+        18px 0;
 
       border-bottom:
         1px solid
-        rgba(16,47,58,0.2);
+        rgba(16, 47, 58, 0.20);
     }
 
 
@@ -642,56 +665,67 @@
     }
 
 
-    /* =========================
+    /* ========================================
        FOOTER
-    ========================= */
+    ======================================== */
 
     footer {
 
-      background: #102f3a;
+      background:
+        #102f3a;
 
-      color: #dbe7e5;
+      color:
+        #dbe7e5;
 
-      text-align: center;
+      text-align:
+        center;
 
-      padding: 50px 25px;
+      padding:
+        50px 25px;
     }
 
 
     footer .logo {
 
-      margin-bottom: 15px;
+      margin-bottom:
+        15px;
 
-      justify-content: center;
+      justify-content:
+        center;
     }
 
 
     footer .logo img {
 
-      width: 300px;
+      width:
+        300px;
 
-      height: 75px;
+      height:
+        75px;
     }
 
 
     footer p {
 
-      font-size: 13px;
+      font-size:
+        13px;
 
-      opacity: 0.7;
+      opacity:
+        0.7;
     }
 
 
-    /* =========================
+    /* ========================================
        MÓVIL
-    ========================= */
+    ======================================== */
 
     @media (max-width: 750px) {
 
 
       nav {
 
-        height: 82px;
+        height:
+          82px;
 
         padding:
           5px 18px;
@@ -700,37 +734,45 @@
 
       .menu {
 
-        display: none;
+        display:
+          none;
       }
 
 
       .logo img {
 
-        width: 250px;
+        width:
+          250px;
 
-        max-width: 250px;
+        max-width:
+          250px;
 
-        height: 68px;
+        height:
+          68px;
       }
 
 
       .hero {
 
-        min-height: 90vh;
+        min-height:
+          90vh;
 
-        padding-top: 130px;
+        padding-top:
+          130px;
       }
 
 
       .hero h1 {
 
-        letter-spacing: 6px;
+        letter-spacing:
+          6px;
       }
 
 
       .hero h2 {
 
-        letter-spacing: 3px;
+        letter-spacing:
+          3px;
       }
 
 
@@ -738,27 +780,32 @@
       .carta-grid,
       .ubicacion {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
       }
 
 
       .section-title {
 
-        font-size: 36px;
+        font-size:
+          36px;
       }
 
 
       .pedidos h2 {
 
-        font-size: 38px;
+        font-size:
+          38px;
       }
 
 
       footer .logo img {
 
-        width: 240px;
+        width:
+          240px;
 
-        height: 65px;
+        height:
+          65px;
       }
 
     }
@@ -771,9 +818,9 @@
 <body>
 
 
-  <!-- =========================
+  <!-- =====================================
        HEADER
-  ========================= -->
+  ====================================== -->
 
   <header>
 
@@ -820,9 +867,9 @@
   </header>
 
 
-  <!-- =========================
+  <!-- =====================================
        HERO
-  ========================= -->
+  ====================================== -->
 
   <section class="hero">
 
@@ -874,9 +921,9 @@
   </section>
 
 
-  <!-- =========================
+  <!-- =====================================
        CONCEPTO
-  ========================= -->
+  ====================================== -->
 
   <section
     class="concepto"
@@ -959,9 +1006,9 @@
   </section>
 
 
-  <!-- =========================
+  <!-- =====================================
        CARTA
-  ========================= -->
+  ====================================== -->
 
   <section id="carta">
 
@@ -1123,9 +1170,9 @@
   </section>
 
 
-  <!-- =========================
+  <!-- =====================================
        PEDIDOS
-  ========================= -->
+  ====================================== -->
 
   <section
     class="pedidos"
@@ -1145,10 +1192,8 @@
 
 
       <p>
-
         Haz tu pedido directamente por WhatsApp.
         Te atenderemos y confirmaremos tu pedido.
-
       </p>
 
 
@@ -1158,9 +1203,7 @@
         target="_blank"
         rel="noopener"
       >
-
         PEDIR POR WHATSAPP
-
       </a>
 
     </div>
@@ -1168,9 +1211,9 @@
   </section>
 
 
-  <!-- =========================
+  <!-- =====================================
        UBICACIÓN
-  ========================= -->
+  ====================================== -->
 
   <section id="ubicacion">
 
@@ -1239,9 +1282,9 @@
   </section>
 
 
-  <!-- =========================
+  <!-- =====================================
        FOOTER
-  ========================= -->
+  ====================================== -->
 
   <footer>
 
