@@ -1,14 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>PACÍFICO — Cocina Ecuatoriana</title>
-  <meta name="description" content="PACÍFICO — Cocina ecuatoriana con identidad, producto y sabor.">
+
+  <meta
+    name="description"
+    content="PACÍFICO — Cocina ecuatoriana con identidad, producto y sabor."
+  >
 
   <style>
+
+    /* =========================
+       RESET
+    ========================= */
 
     * {
       box-sizing: border-box;
@@ -21,14 +31,79 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       background: #f5f0e8;
+
       color: #102f3a;
+
       line-height: 1.6;
+
+      position: relative;
+
+      overflow-x: hidden;
     }
 
+
+    /* =========================
+       FONDO GENERAL PACÍFICO
+    ========================= */
+
+    body::before {
+
+      content: "";
+
+      position: fixed;
+
+      inset: -20px;
+
+      background-image:
+        url("fondo-pacifico.jpg");
+
+      background-size: cover;
+
+      background-position: center center;
+
+      background-repeat: no-repeat;
+
+      filter: blur(6px);
+
+      opacity: 0.20;
+
+      z-index: -2;
+
+      pointer-events: none;
+
+      transform: scale(1.03);
+    }
+
+
+    /* Capa crema para suavizar el fondo */
+
+    body::after {
+
+      content: "";
+
+      position: fixed;
+
+      inset: 0;
+
+      background: rgba(245, 240, 232, 0.45);
+
+      z-index: -1;
+
+      pointer-events: none;
+    }
+
+
     a {
+
       color: inherit;
+
       text-decoration: none;
     }
 
@@ -38,57 +113,106 @@
     ========================= */
 
     header {
+
       position: fixed;
+
       top: 0;
+
       left: 0;
+
       width: 100%;
+
       z-index: 1000;
-      background: rgba(245, 240, 232, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(16, 47, 58, 0.1);
+
+      background:
+        rgba(245, 240, 232, 0.88);
+
+      backdrop-filter: blur(12px);
+
+      -webkit-backdrop-filter: blur(12px);
+
+      border-bottom:
+        1px solid
+        rgba(16, 47, 58, 0.10);
     }
+
 
     nav {
+
       max-width: 1200px;
+
       height: 100px;
+
       margin: auto;
-      padding: 8px 25px;
+
+      padding: 5px 25px;
+
       display: flex;
+
       justify-content: space-between;
+
       align-items: center;
     }
 
+
+    /* LOGO */
+
     .logo {
+
       display: flex;
+
       align-items: center;
-      justify-content: center;
+
       height: 100%;
     }
 
-.logo img {
-    width: 380px;
-    height: 90px;
-    object-fit: contain;
-    object-position: center;
-    display: block;
-}
+
+    .logo img {
+
+      height: 90px;
+
+      width: 380px;
+
+      max-width: 380px;
+
+      object-fit: contain;
+
+      object-position: center;
+
+      display: block;
+    }
+
+
+    /* MENU */
 
     .menu {
+
       display: flex;
+
       gap: 28px;
+
       align-items: center;
+
       font-size: 14px;
     }
 
+
     .menu a:hover {
+
       opacity: 0.55;
     }
 
+
     .pedido-btn {
+
       background: #102f3a;
+
       color: white;
+
       padding: 11px 18px;
+
       border-radius: 30px;
+
       font-weight: bold;
     }
 
@@ -98,107 +222,205 @@
     ========================= */
 
     .hero {
+
       min-height: 100vh;
-      padding: 150px 25px 80px;
+
+      padding:
+        150px
+        25px
+        80px;
+
       display: flex;
+
       align-items: center;
+
       justify-content: center;
+
       text-align: center;
 
+      position: relative;
+
       background:
+
+        linear-gradient(
+          rgba(245, 240, 232, 0.35),
+          rgba(245, 240, 232, 0.35)
+        ),
+
         radial-gradient(
           circle at 50% 35%,
           rgba(30, 105, 120, 0.13),
-          transparent 35%
-        ),
-        #f5f0e8;
+          transparent 40%
+        );
     }
+
 
     .hero-content {
+
       max-width: 850px;
+
+      position: relative;
+
+      z-index: 2;
     }
+
 
     .eyebrow {
+
       font-size: 12px;
+
       letter-spacing: 5px;
+
       text-transform: uppercase;
+
       margin-bottom: 25px;
-      opacity: 0.7;
+
+      opacity: 0.75;
     }
+
 
     .hero h1 {
-      font-size: clamp(65px, 13vw, 150px);
+
+      font-size:
+        clamp(
+          65px,
+          13vw,
+          150px
+        );
+
       letter-spacing: 12px;
+
       line-height: 0.9;
+
       font-weight: 800;
+
+      text-shadow:
+        0 2px 10px
+        rgba(255,255,255,0.45);
     }
 
+
     .hero h2 {
+
       margin-top: 25px;
-      font-size: clamp(20px, 4vw, 34px);
+
+      font-size:
+        clamp(
+          20px,
+          4vw,
+          34px
+        );
+
       font-weight: 400;
+
       letter-spacing: 5px;
     }
 
+
     .hero p {
+
       max-width: 600px;
+
       margin: 30px auto;
+
       font-size: 17px;
+
       color: #48616a;
     }
 
+
     .hero-buttons {
+
       display: flex;
+
       justify-content: center;
+
       gap: 15px;
+
       flex-wrap: wrap;
+
       margin-top: 35px;
     }
 
+
     .btn {
+
       display: inline-block;
+
       padding: 15px 28px;
+
       border-radius: 30px;
+
       font-weight: bold;
+
       transition: 0.2s;
     }
 
+
     .btn-primary {
+
       background: #102f3a;
+
       color: white;
     }
 
+
     .btn-secondary {
-      border: 1px solid #102f3a;
+
+      border:
+        1px solid
+        #102f3a;
+
+      background:
+        rgba(255,255,255,0.35);
     }
 
+
     .btn:hover {
-      transform: translateY(-2px);
+
+      transform:
+        translateY(-2px);
     }
 
 
     /* =========================
-       SECTIONS
+       SECCIONES
     ========================= */
 
     section {
-      padding: 100px 25px;
+
+      padding:
+        100px
+        25px;
+
+      position: relative;
     }
 
+
     .container {
+
       max-width: 1100px;
+
       margin: auto;
     }
 
+
     .section-title {
+
       font-size: 45px;
+
       margin-bottom: 20px;
+
       letter-spacing: 2px;
     }
 
+
     .section-intro {
+
       max-width: 650px;
+
       color: #53666c;
+
       margin-bottom: 50px;
     }
 
@@ -208,31 +430,51 @@
     ========================= */
 
     .concepto {
-      background: #102f3a;
+
+      background:
+        rgba(16, 47, 58, 0.97);
+
       color: #f5f0e8;
     }
 
+
     .concepto .section-intro {
+
       color: #d3dddf;
     }
 
+
     .concept-grid {
+
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 25px;
     }
 
+
     .concept-card {
-      border-top: 1px solid rgba(255,255,255,0.35);
+
+      border-top:
+        1px solid
+        rgba(255,255,255,0.35);
+
       padding-top: 25px;
     }
 
+
     .concept-card h3 {
+
       font-size: 22px;
+
       margin-bottom: 12px;
     }
 
+
     .concept-card p {
+
       color: #c8d4d6;
     }
 
@@ -241,31 +483,61 @@
        CARTA
     ========================= */
 
+    #carta {
+
+      background:
+        rgba(245, 240, 232, 0.72);
+
+      backdrop-filter:
+        blur(2px);
+    }
+
+
     .carta-grid {
+
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
       gap: 20px;
     }
+
 
     .plato {
-      border-bottom: 1px solid rgba(16,47,58,0.2);
+
+      border-bottom:
+        1px solid
+        rgba(16,47,58,0.2);
+
       padding: 20px 0;
+
       display: flex;
+
       justify-content: space-between;
+
       gap: 20px;
     }
 
+
     .plato h3 {
+
       font-size: 19px;
     }
 
+
     .plato p {
+
       color: #66777b;
+
       font-size: 14px;
     }
 
+
     .precio {
+
       font-weight: bold;
+
       white-space: nowrap;
     }
 
@@ -275,21 +547,32 @@
     ========================= */
 
     .pedidos {
-      background: #dbe7e5;
+
+      background:
+        rgba(219, 231, 229, 0.94);
+
       text-align: center;
     }
 
+
     .pedidos .container {
+
       max-width: 750px;
     }
 
+
     .pedidos h2 {
+
       font-size: 50px;
+
       margin-bottom: 20px;
     }
 
+
     .pedidos p {
+
       margin-bottom: 30px;
+
       color: #50666b;
     }
 
@@ -298,20 +581,40 @@
        UBICACIÓN
     ========================= */
 
+    #ubicacion {
+
+      background:
+        rgba(245, 240, 232, 0.72);
+    }
+
+
     .ubicacion {
+
       display: grid;
-      grid-template-columns: 1fr 1fr;
+
+      grid-template-columns:
+        1fr 1fr;
+
       gap: 60px;
+
       align-items: center;
     }
 
+
     .info-line {
+
       padding: 18px 0;
-      border-bottom: 1px solid rgba(16,47,58,0.2);
+
+      border-bottom:
+        1px solid
+        rgba(16,47,58,0.2);
     }
 
+
     .info-line strong {
+
       display: block;
+
       margin-bottom: 5px;
     }
 
@@ -321,18 +624,37 @@
     ========================= */
 
     footer {
+
       background: #102f3a;
+
       color: #dbe7e5;
+
       text-align: center;
+
       padding: 50px 25px;
     }
 
+
     footer .logo {
+
       margin-bottom: 15px;
+
+      justify-content: center;
     }
 
+
+    footer .logo img {
+
+      width: 300px;
+
+      height: 75px;
+    }
+
+
     footer p {
+
       font-size: 13px;
+
       opacity: 0.7;
     }
 
@@ -343,45 +665,83 @@
 
     @media (max-width: 750px) {
 
+
       nav {
+
         height: 82px;
-        padding: 6px 18px;
+
+        padding:
+          5px 18px;
       }
 
-      .logo img {
-        width: 210px;
-        height: 65px;
-      }
 
       .menu {
+
         display: none;
       }
 
+
+      .logo img {
+
+        width: 250px;
+
+        max-width: 250px;
+
+        height: 68px;
+      }
+
+
       .hero {
+
         min-height: 90vh;
+
         padding-top: 130px;
       }
 
+
       .hero h1 {
+
         letter-spacing: 6px;
       }
+
+
+      .hero h2 {
+
+        letter-spacing: 3px;
+      }
+
 
       .concept-grid,
       .carta-grid,
       .ubicacion {
+
         grid-template-columns: 1fr;
       }
 
+
       .section-title {
+
         font-size: 36px;
       }
 
+
       .pedidos h2 {
+
         font-size: 38px;
       }
+
+
+      footer .logo img {
+
+        width: 240px;
+
+        height: 65px;
+      }
+
     }
 
   </style>
+
 </head>
 
 
@@ -396,7 +756,10 @@
 
     <nav>
 
-      <a href="#" class="logo">
+      <a
+        href="#"
+        class="logo"
+      >
 
         <img
           src="logo-pacifico-header.png"
@@ -420,7 +783,10 @@
           Ubicación
         </a>
 
-        <a href="#pedidos" class="pedido-btn">
+        <a
+          href="#pedidos"
+          class="pedido-btn"
+        >
           Pedir online
         </a>
 
@@ -429,7 +795,6 @@
     </nav>
 
   </header>
-
 
 
   <!-- =========================
@@ -444,27 +809,38 @@
         Cocina ecuatoriana
       </div>
 
+
       <h1>
         PACÍFICO
       </h1>
+
 
       <h2>
         COCINA ECUATORIANA
       </h2>
 
+
       <p>
         Sabores de Ecuador, producto y memoria.
-        Una cocina hecha para disfrutar, compartir y volver.
+        Una cocina hecha para disfrutar,
+        compartir y volver.
       </p>
 
 
       <div class="hero-buttons">
 
-        <a href="#carta" class="btn btn-primary">
+        <a
+          href="#carta"
+          class="btn btn-primary"
+        >
           VER CARTA
         </a>
 
-        <a href="#pedidos" class="btn btn-secondary">
+
+        <a
+          href="#pedidos"
+          class="btn btn-secondary"
+        >
           PEDIR ONLINE
         </a>
 
@@ -475,12 +851,14 @@
   </section>
 
 
-
   <!-- =========================
        CONCEPTO
   ========================= -->
 
-  <section class="concepto" id="concepto">
+  <section
+    class="concepto"
+    id="concepto"
+  >
 
     <div class="container">
 
@@ -488,14 +866,19 @@
         Nuestra identidad
       </div>
 
+
       <h2 class="section-title">
         Ecuador en cada plato.
       </h2>
 
+
       <p class="section-intro">
+
         PACÍFICO nace de una idea sencilla:
         llevar la cocina ecuatoriana a la mesa
-        con identidad, producto y respeto por sus sabores.
+        con identidad, producto y respeto por
+        sus sabores.
+
       </p>
 
 
@@ -509,8 +892,9 @@
           </h3>
 
           <p>
-            Ingredientes seleccionados y una cocina
-            pensada para respetar cada producto.
+            Ingredientes seleccionados y una
+            cocina pensada para respetar
+            cada producto.
           </p>
 
         </div>
@@ -523,8 +907,8 @@
           </h3>
 
           <p>
-            Recetas ecuatorianas, memoria y sabores
-            que cuentan de dónde venimos.
+            Recetas ecuatorianas, memoria y
+            sabores que cuentan de dónde venimos.
           </p>
 
         </div>
@@ -537,8 +921,9 @@
           </h3>
 
           <p>
-            Una mirada contemporánea a una gastronomía
-            llena de costa, montaña, tradición y diversidad.
+            Una mirada contemporánea a una
+            gastronomía llena de costa, montaña,
+            tradición y diversidad.
           </p>
 
         </div>
@@ -549,7 +934,6 @@
     </div>
 
   </section>
-
 
 
   <!-- =========================
@@ -564,14 +948,19 @@
         Nuestra carta
       </div>
 
+
       <h2 class="section-title">
         Para compartir.
       </h2>
 
+
       <p class="section-intro">
-        Una selección de clásicos ecuatorianos y platos
-        de PACÍFICO. La carta podrá cambiar según
-        producto y temporada.
+
+        Una selección de clásicos ecuatorianos
+        y platos de PACÍFICO.
+        La carta podrá cambiar según producto
+        y temporada.
+
       </p>
 
 
@@ -711,12 +1100,14 @@
   </section>
 
 
-
   <!-- =========================
        PEDIDOS
   ========================= -->
 
-  <section class="pedidos" id="pedidos">
+  <section
+    class="pedidos"
+    id="pedidos"
+  >
 
     <div class="container">
 
@@ -724,13 +1115,17 @@
         PACÍFICO
       </div>
 
+
       <h2>
         Pide tu comida.
       </h2>
 
+
       <p>
+
         Haz tu pedido directamente por WhatsApp.
         Te atenderemos y confirmaremos tu pedido.
+
       </p>
 
 
@@ -740,13 +1135,14 @@
         target="_blank"
         rel="noopener"
       >
+
         PEDIR POR WHATSAPP
+
       </a>
 
     </div>
 
   </section>
-
 
 
   <!-- =========================
@@ -764,9 +1160,11 @@
           Visítanos
         </div>
 
+
         <h2 class="section-title">
           PACÍFICO
         </h2>
+
 
         <p class="section-intro">
           Cocina ecuatoriana para llevar y disfrutar.
@@ -776,6 +1174,7 @@
 
 
       <div>
+
 
         <div class="info-line">
 
@@ -809,13 +1208,12 @@
 
         </div>
 
-      </div>
 
+      </div>
 
     </div>
 
   </section>
-
 
 
   <!-- =========================
@@ -823,6 +1221,7 @@
   ========================= -->
 
   <footer>
+
 
     <div class="logo">
 
@@ -833,12 +1232,15 @@
 
     </div>
 
+
     <p>
       © 2026 PACÍFICO · Cocina Ecuatoriana
     </p>
+
 
   </footer>
 
 
 </body>
+
 </html>
