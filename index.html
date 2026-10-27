@@ -6,26 +6,20 @@
 
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>
-    PACÍFICO | Cocina Ecuatoriana
-  </title>
+  <title>PACÍFICO | Cocina Ecuatoriana</title>
 
   <meta
     name="description"
     content="PACÍFICO Cocina Ecuatoriana. Cocina ecuatoriana de autor en Caravaca de la Cruz, Murcia."
   >
 
-
   <style>
 
-    /* =========================
+    /* =====================================================
        RESET
-    ========================== */
+    ===================================================== */
 
     * {
       margin: 0;
@@ -46,9 +40,9 @@
     }
 
 
-    /* =========================
-       FONDO
-    ========================== */
+    /* =====================================================
+       FONDO GENERAL
+    ===================================================== */
 
     body::before {
 
@@ -58,8 +52,7 @@
 
       inset: -20px;
 
-      background-image:
-        url("fondo-pacifico.jpg");
+      background-image: url("fondo-pacifico.jpg");
 
       background-size: cover;
 
@@ -88,8 +81,7 @@
 
       inset: 0;
 
-      background:
-        rgba(245, 240, 232, 0.08);
+      background: rgba(245, 240, 232, 0.08);
 
       z-index: 0;
 
@@ -99,17 +91,14 @@
 
 
     body > * {
-
       position: relative;
-
       z-index: 1;
-
     }
 
 
-    /* =========================
+    /* =====================================================
        HEADER
-    ========================== */
+    ===================================================== */
 
     header {
 
@@ -122,15 +111,11 @@
 
       height: 100px;
 
-      background:
-        rgba(245, 240, 232, 0.94);
+      background: rgba(245, 240, 232, 0.94);
 
-      backdrop-filter:
-        blur(8px);
+      backdrop-filter: blur(8px);
 
-      border-bottom:
-        1px solid
-        rgba(16, 42, 67, 0.08);
+      border-bottom: 1px solid rgba(16, 42, 67, 0.08);
 
       z-index: 1000;
 
@@ -156,9 +141,9 @@
     }
 
 
-    /* =========================
+    /* =====================================================
        LOGO
-    ========================== */
+    ===================================================== */
 
     .logo {
 
@@ -175,9 +160,9 @@
     }
 
 
-    /* =========================
+    /* =====================================================
        MENU
-    ========================== */
+    ===================================================== */
 
     .menu {
 
@@ -200,22 +185,19 @@
 
       font-weight: 500;
 
-      transition:
-        opacity 0.25s ease;
+      transition: opacity 0.25s ease;
 
     }
 
 
     .menu > a:not(.pedido-btn):hover {
-
       opacity: 0.55;
-
     }
 
 
-    /* =========================
+    /* =====================================================
        REDES SOCIALES
-    ========================== */
+    ===================================================== */
 
     .social-icons {
 
@@ -224,8 +206,6 @@
       align-items: center;
 
       gap: 14px;
-
-      margin-right: 2px;
 
     }
 
@@ -264,17 +244,16 @@
 
     .social-icons a:hover {
 
-      transform:
-        translateY(-2px);
+      transform: translateY(-2px);
 
       opacity: 0.6;
 
     }
 
 
-    /* =========================
-       BOTÓN PEDIR
-    ========================== */
+    /* =====================================================
+       BOTÓN PEDIR ONLINE
+    ===================================================== */
 
     .pedido-btn {
 
@@ -303,22 +282,20 @@
 
       background: #c5a46d;
 
-      transform:
-        translateY(-2px);
+      transform: translateY(-2px);
 
     }
 
 
-    /* =========================
+    /* =====================================================
        HERO
-    ========================== */
+    ===================================================== */
 
     .hero {
 
       min-height: 100vh;
 
-      padding:
-        170px 30px 100px;
+      padding: 170px 30px 100px;
 
       display: flex;
 
@@ -332,9 +309,7 @@
 
 
     .hero-content {
-
       max-width: 900px;
-
     }
 
 
@@ -348,15 +323,12 @@
 
       margin-bottom: 22px;
 
-      color: #102a43;
-
     }
 
 
     .hero h1 {
 
-      font-size:
-        clamp(55px, 10vw, 120px);
+      font-size: clamp(55px, 10vw, 120px);
 
       line-height: 0.9;
 
@@ -371,8 +343,7 @@
 
     .hero-subtitle {
 
-      font-size:
-        clamp(18px, 3vw, 30px);
+      font-size: clamp(18px, 3vw, 30px);
 
       letter-spacing: 5px;
 
@@ -387,8 +358,7 @@
 
       max-width: 650px;
 
-      margin:
-        0 auto 40px;
+      margin: 0 auto 40px;
 
       font-size: 17px;
 
@@ -414,11 +384,9 @@
 
       display: inline-block;
 
-      padding:
-        14px 25px;
+      padding: 14px 25px;
 
-      border:
-        1px solid #102a43;
+      border: 1px solid #102a43;
 
       color: #102a43;
 
@@ -426,8 +394,7 @@
 
       font-size: 14px;
 
-      transition:
-        all 0.25s ease;
+      transition: all 0.25s ease;
 
     }
 
@@ -459,15 +426,12 @@
     }
 
 
-    /* =========================
+    /* =====================================================
        SECCIONES
-    ========================== */
+    ===================================================== */
 
     section {
-
-      padding:
-        110px 30px;
-
+      padding: 110px 30px;
     }
 
 
@@ -484,7 +448,7 @@
 
       text-align: center;
 
-      margin-bottom: 60px;
+      margin-bottom: 70px;
 
     }
 
@@ -506,8 +470,7 @@
 
     .section-title h2 {
 
-      font-size:
-        clamp(34px, 5vw, 55px);
+      font-size: clamp(34px, 5vw, 55px);
 
       line-height: 1.05;
 
@@ -516,51 +479,92 @@
     }
 
 
-    /* =========================
+    /* =====================================================
        ACERCA DE NOSOTROS
-    ========================== */
+    ===================================================== */
 
     #concepto {
 
-      background:
-        rgba(245, 240, 232, 0.86);
+      background: rgba(245, 240, 232, 0.90);
 
     }
 
 
     .about-story {
 
-      max-width: 850px;
+      max-width: 1100px;
 
       margin: auto;
 
     }
 
 
-    .about-intro {
+    /* -----------------------------------------------------
+       HISTORIA FAMILIAR
+    ----------------------------------------------------- */
 
-      text-align: center;
+    .story-family {
 
-      max-width: 760px;
+      display: grid;
 
-      margin:
-        0 auto 45px;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 60px;
+
+      align-items: center;
+
+      margin-bottom: 100px;
 
     }
 
 
-    .about-intro h3 {
+    .story-image {
 
-      font-size: 30px;
+      width: 100%;
+
+      overflow: hidden;
+
+    }
+
+
+    .story-image img {
+
+      width: 100%;
+
+      height: 560px;
+
+      object-fit: cover;
+
+      display: block;
+
+      filter: grayscale(100%);
+
+      transition: transform 0.5s ease;
+
+    }
+
+
+    .story-image:hover img {
+
+      transform: scale(1.03);
+
+    }
+
+
+    .story-text h3 {
+
+      font-size: 32px;
 
       line-height: 1.2;
 
       margin-bottom: 25px;
 
+      color: #102a43;
+
     }
 
 
-    .about-story p {
+    .story-text p {
 
       font-size: 16px;
 
@@ -573,21 +577,23 @@
     }
 
 
+    /* -----------------------------------------------------
+       FRASE DESTACADA
+    ----------------------------------------------------- */
+
     .about-highlight {
 
-      margin:
-        50px auto;
+      margin: 70px auto 100px;
 
-      padding:
-        35px 40px;
+      padding: 45px 50px;
 
-      border-top:
-        1px solid #c5a46d;
+      border-top: 1px solid #c5a46d;
 
-      border-bottom:
-        1px solid #c5a46d;
+      border-bottom: 1px solid #c5a46d;
 
       text-align: center;
+
+      max-width: 850px;
 
     }
 
@@ -596,7 +602,7 @@
 
       margin: 0;
 
-      font-size: 25px;
+      font-size: 27px;
 
       line-height: 1.45;
 
@@ -607,33 +613,71 @@
     }
 
 
-    .about-story-content h3 {
+    /* -----------------------------------------------------
+       HISTORIA DEL CHEF
+    ----------------------------------------------------- */
 
-      margin-top: 60px;
+    .story-chef {
 
-      margin-bottom: 22px;
+      display: grid;
 
-      font-size: 28px;
+      grid-template-columns: 1fr 1fr;
 
-      color: #102a43;
+      gap: 60px;
+
+      align-items: center;
+
+      margin-bottom: 100px;
 
     }
 
 
-    .about-story-content strong {
+    .story-chef .story-image img {
 
-      color: #102a43;
+      height: 620px;
+
+      object-position: center top;
 
     }
 
+
+    /* -----------------------------------------------------
+       TRAYECTORIA
+    ----------------------------------------------------- */
+
+    .story-career {
+
+      display: grid;
+
+      grid-template-columns: 1.2fr 0.8fr;
+
+      gap: 60px;
+
+      align-items: center;
+
+      margin-bottom: 90px;
+
+    }
+
+
+    .story-career .story-image img {
+
+      height: 600px;
+
+      object-position: center top;
+
+    }
+
+
+    /* -----------------------------------------------------
+       FRASE ECUADOR / ESPAÑA
+    ----------------------------------------------------- */
 
     .about-quote {
 
-      margin:
-        55px auto;
+      margin: 80px auto;
 
-      padding:
-        35px 25px;
+      padding: 45px 25px;
 
       display: flex;
 
@@ -643,7 +687,7 @@
 
       text-align: center;
 
-      font-size: 21px;
+      font-size: 22px;
 
       line-height: 1.5;
 
@@ -652,62 +696,74 @@
     }
 
 
-    .about-quote span {
-
-      display: block;
-
-    }
-
-
     .about-quote strong {
 
-      margin-top: 8px;
+      margin-top: 10px;
 
-      font-size: 25px;
+      font-size: 28px;
 
       color: #c5a46d;
 
     }
 
 
-    .about-final {
+    /* -----------------------------------------------------
+       FINAL DE LA HISTORIA
+    ----------------------------------------------------- */
 
-      font-size: 19px !important;
+    .story-ending {
+
+      max-width: 800px;
+
+      margin: auto;
 
       text-align: center;
-
-      margin-top: 35px;
 
     }
 
 
-    .about-final.strong {
+    .story-ending h3 {
 
-      font-size: 22px !important;
+      font-size: 32px;
+
+      margin-bottom: 25px;
+
+    }
+
+
+    .story-ending p {
+
+      font-size: 16px;
+
+      line-height: 1.85;
+
+      color: #40566b;
+
+      margin-bottom: 18px;
+
+    }
+
+
+    .story-ending .final-text {
+
+      margin-top: 40px;
+
+      font-size: 22px;
 
       font-weight: 600;
 
-      color: #102a43 !important;
-
-      text-align: center;
-
-      max-width: 750px;
-
-      margin-left: auto;
-
-      margin-right: auto;
+      color: #102a43;
 
     }
 
 
-    /* =========================
+    /* =====================================================
        CARTA
-    ========================== */
+    ===================================================== */
 
     #carta {
 
-      background:
-        rgba(255, 255, 255, 0.72);
+      background: rgba(255, 255, 255, 0.78);
 
     }
 
@@ -716,11 +772,9 @@
 
       display: grid;
 
-      grid-template-columns:
-        repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
 
-      gap:
-        0 60px;
+      gap: 0 60px;
 
     }
 
@@ -735,12 +789,10 @@
 
       gap: 20px;
 
-      padding:
-        25px 0;
+      padding: 25px 0;
 
       border-bottom:
-        1px solid
-        rgba(16, 42, 67, 0.15);
+        1px solid rgba(16, 42, 67, 0.15);
 
     }
 
@@ -774,14 +826,13 @@
     }
 
 
-    /* =========================
+    /* =====================================================
        PEDIDOS
-    ========================== */
+    ===================================================== */
 
     #pedidos {
 
-      background:
-        rgba(16, 42, 67, 0.94);
+      background: rgba(16, 42, 67, 0.94);
 
       color: #f5f0e8;
 
@@ -801,11 +852,9 @@
 
       max-width: 650px;
 
-      margin:
-        0 auto 35px;
+      margin: 0 auto 35px;
 
-      color:
-        rgba(245, 240, 232, 0.8);
+      color: rgba(245, 240, 232, 0.8);
 
     }
 
@@ -814,8 +863,7 @@
 
       display: inline-block;
 
-      padding:
-        15px 30px;
+      padding: 15px 30px;
 
       background: #c5a46d;
 
@@ -825,28 +873,25 @@
 
       font-weight: 600;
 
-      transition:
-        transform 0.25s ease;
+      transition: transform 0.25s ease;
 
     }
 
 
     .whatsapp-button:hover {
 
-      transform:
-        translateY(-2px);
+      transform: translateY(-2px);
 
     }
 
 
-    /* =========================
+    /* =====================================================
        UBICACIÓN
-    ========================== */
+    ===================================================== */
 
     #ubicacion {
 
-      background:
-        rgba(245, 240, 232, 0.82);
+      background: rgba(245, 240, 232, 0.86);
 
       text-align: center;
 
@@ -880,14 +925,13 @@
     }
 
 
-    /* =========================
+    /* =====================================================
        FOOTER
-    ========================== */
+    ===================================================== */
 
     footer {
 
-      padding:
-        60px 30px;
+      padding: 60px 30px;
 
       background: #102a43;
 
@@ -913,54 +957,69 @@
 
       font-size: 13px;
 
-      color:
-        rgba(245, 240, 232, 0.65);
+      color: rgba(245, 240, 232, 0.65);
 
     }
 
 
-    /* =========================
-       RESPONSIVE
-    ========================== */
+    /* =====================================================
+       RESPONSIVE — TABLET
+    ===================================================== */
 
     @media (max-width: 900px) {
 
       .logo {
-
         width: 300px;
-
       }
 
 
       .menu {
-
         gap: 18px;
+      }
+
+
+      .story-family,
+      .story-chef,
+      .story-career {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
 
       }
 
 
-      .social-icons {
+      .story-chef .story-image {
+        order: -1;
+      }
 
-        gap: 10px;
 
+      .story-image img {
+        height: 500px;
+      }
+
+
+      .story-chef .story-image img,
+      .story-career .story-image img {
+        height: 550px;
       }
 
 
       .menu-grid {
-
         grid-template-columns: 1fr;
-
       }
 
     }
 
 
+    /* =====================================================
+       RESPONSIVE — MÓVIL
+    ===================================================== */
+
     @media (max-width: 750px) {
 
       header {
-
         height: 80px;
-
       }
 
 
@@ -968,8 +1027,7 @@
 
         height: 80px;
 
-        padding:
-          0 18px;
+        padding: 0 18px;
 
       }
 
@@ -999,9 +1057,7 @@
 
       .social-icons {
 
-        margin-right: 0;
-
-        gap: 12px;
+        gap: 10px;
 
       }
 
@@ -1026,8 +1082,7 @@
 
       .pedido-btn {
 
-        padding:
-          9px 12px;
+        padding: 9px 12px;
 
         font-size: 11px;
 
@@ -1043,8 +1098,7 @@
 
       section {
 
-        padding:
-          80px 20px;
+        padding: 80px 20px;
 
       }
 
@@ -1063,17 +1117,37 @@
       }
 
 
-      .about-intro h3 {
+      .story-family,
+      .story-chef,
+      .story-career {
 
-        font-size: 25px;
+        margin-bottom: 70px;
+
+      }
+
+
+      .story-image img,
+      .story-chef .story-image img,
+      .story-career .story-image img {
+
+        height: 430px;
+
+      }
+
+
+      .story-text h3,
+      .story-ending h3 {
+
+        font-size: 27px;
 
       }
 
 
       .about-highlight {
 
-        padding:
-          30px 20px;
+        padding: 30px 20px;
+
+        margin: 50px auto 70px;
 
       }
 
@@ -1085,33 +1159,18 @@
       }
 
 
-      .about-story-content h3 {
-
-        font-size: 25px;
-
-      }
-
-
       .about-quote {
 
-        font-size: 18px;
+        font-size: 19px;
 
-        padding:
-          25px 15px;
+        margin: 60px auto;
 
       }
 
 
       .about-quote strong {
 
-        font-size: 21px;
-
-      }
-
-
-      .about-final.strong {
-
-        font-size: 19px !important;
+        font-size: 23px;
 
       }
 
@@ -1125,9 +1184,9 @@
 <body>
 
 
-  <!-- =========================
+  <!-- =====================================================
        HEADER
-  ========================== -->
+  ====================================================== -->
 
   <header>
 
@@ -1166,10 +1225,7 @@
             aria-label="Instagram PACÍFICO"
           >
 
-            <svg
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
+            <svg viewBox="0 0 24 24">
 
               <rect
                 x="3"
@@ -1212,10 +1268,7 @@
             aria-label="TikTok PACÍFICO"
           >
 
-            <svg
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
+            <svg viewBox="0 0 24 24">
 
               <path
                 d="M15 3c.3 2.1 1.5 3.5 3.5 4v3
@@ -1244,10 +1297,7 @@
             aria-label="Facebook PACÍFICO"
           >
 
-            <svg
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
+            <svg viewBox="0 0 24 24">
 
               <path
                 d="M14 8h3V4.5h-3
@@ -1293,16 +1343,16 @@
 
 
 
-  <!-- =========================
+  <!-- =====================================================
        CONTENIDO
-  ========================== -->
+  ====================================================== -->
 
   <main id="inicio">
 
 
-    <!-- =========================
+    <!-- ===================================================
          HERO
-    ========================== -->
+    ==================================================== -->
 
     <section class="hero">
 
@@ -1310,23 +1360,17 @@
 
 
         <div class="hero-small">
-
           Cocina ecuatoriana
-
         </div>
 
 
         <h1>
-
           PACÍFICO
-
         </h1>
 
 
         <div class="hero-subtitle">
-
           Cocina ecuatoriana
-
         </div>
 
 
@@ -1346,9 +1390,7 @@
             href="#concepto"
             class="hero-button primary"
           >
-
             Nuestra historia
-
           </a>
 
 
@@ -1356,9 +1398,7 @@
             href="#carta"
             class="hero-button"
           >
-
             Ver carta
-
           </a>
 
 
@@ -1370,9 +1410,9 @@
 
 
 
-    <!-- =========================
+    <!-- ===================================================
          ACERCA DE NOSOTROS
-    ========================== -->
+    ==================================================== -->
 
     <section id="concepto">
 
@@ -1382,15 +1422,11 @@
         <div class="section-title">
 
           <span>
-
             Nuestra historia
-
           </span>
 
           <h2>
-
             Acerca de nosotros
-
           </h2>
 
         </div>
@@ -1399,54 +1435,67 @@
         <div class="about-story">
 
 
-          <!-- INTRO -->
+          <!-- =================================================
+               BLOQUE FAMILIA
+          ================================================== -->
 
-          <div class="about-intro">
-
-            <h3>
-
-              Todo empezó con una decisión
-              de nuestros padres.
-
-            </h3>
+          <div class="story-family">
 
 
-            <p>
+            <div class="story-image">
 
-              En 2003, nuestros padres tomaron
-              una de las decisiones más importantes
-              de sus vidas: traernos desde Ecuador
-              a España cuando todavía éramos pequeños,
-              buscando para nosotros una vida mejor
-              y nuevas oportunidades.
+              <img
+                src="foto-hermanos.jpg"
+                alt="Renzo y Diego, hermanos y fundadores de PACÍFICO"
+              >
 
-            </p>
+            </div>
 
 
-            <p>
+            <div class="story-text">
 
-              Dejaron atrás muchas cosas, pero
-              trajeron consigo algo que nunca perdimos:
-              nuestras raíces, nuestra cultura y el
-              deseo de salir adelante.
-
-            </p>
+              <h3>
+                Todo empezó con una decisión de nuestros padres.
+              </h3>
 
 
-            <p>
+              <p>
 
-              Crecimos en España, entre dos culturas,
-              aprendiendo el valor del trabajo,
-              del esfuerzo y de luchar por aquello
-              que uno quiere.
+                En 2003, nuestros padres tomaron una de las
+                decisiones más importantes de sus vidas:
+                traernos desde Ecuador a España cuando todavía
+                éramos pequeños, buscando para nosotros una vida
+                mejor y nuevas oportunidades.
 
-            </p>
+              </p>
+
+
+              <p>
+
+                Dejaron atrás muchas cosas, pero trajeron consigo
+                algo que nunca perdimos: nuestras raíces,
+                nuestra cultura y el deseo de salir adelante.
+
+              </p>
+
+
+              <p>
+
+                Crecimos en España, entre dos culturas,
+                aprendiendo el valor del trabajo, del esfuerzo
+                y de luchar por aquello que uno quiere.
+
+              </p>
+
+            </div>
 
           </div>
 
 
 
-          <!-- FRASE DESTACADA -->
+          <!-- =================================================
+               FRASE DESTACADA
+          ================================================== -->
 
           <div class="about-highlight">
 
@@ -1462,207 +1511,174 @@
 
 
 
-          <!-- HISTORIA -->
+          <!-- =================================================
+               BLOQUE DIEGO COCINANDO
+          ================================================== -->
 
-          <div class="about-story-content">
+          <div class="story-chef">
 
 
-            <h3>
+            <div class="story-text">
 
-              Un sueño familiar
+              <h3>
+                Una vida alrededor de la cocina.
+              </h3>
 
-            </h3>
 
+              <p>
 
-            <p>
+                Para Diego, la cocina se convirtió
+                en mucho más que una profesión.
 
-              Durante todos estos años hubo un sueño
-              que nuestros padres nunca dejaron atrás.
+              </p>
 
-            </p>
 
+              <p>
 
-            <p>
+                Mi formación comenzó en el
+                <strong>Instituto de Turismo de Murcia</strong>,
+                donde estudié Cocina y Sala.
 
-              <strong>
-                Siempre quisieron tener su propio restaurante.
-              </strong>
+                Después continué con el
+                <strong>Grado Superior de Dirección de Cocina
+                en IES La Flota</strong>.
 
-            </p>
+              </p>
 
 
-            <p>
+              <p>
 
-              Ese sueño permaneció en nuestra familia
-              durante años, hasta que nosotros,
-              sus hijos, decidimos recogerlo y
-              convertirlo en realidad.
+                A partir de ahí comenzó una etapa de aprendizaje
+                constante, trabajando en diferentes restaurantes
+                y conociendo distintas formas de entender
+                la gastronomía.
 
-            </p>
+              </p>
 
 
-            <p>
+              <p>
 
-              Hoy, PACÍFICO nace de esa ilusión.
+                He pasado por <strong>Lima Limón</strong>,
+                donde descubrí la cocina peruana;
 
-            </p>
+                por el <strong>Real Casino de Murcia</strong>,
+                acercándome a la cocina mediterránea;
 
+                por restaurantes ecuatorianos;
 
-            <p>
+                por <strong>Maiko</strong>,
+                donde aprendí de la precisión y filosofía
+                de la cocina japonesa;
 
-              Somos <strong>Renzo y Diego</strong>,
-              dos hermanos que hemos decidido unir
-              nuestras fuerzas para crear algo propio;
-              un proyecto que represente nuestra historia,
-              nuestras raíces y todo lo que hemos aprendido
-              durante nuestro camino.
+                y también por <strong>Almo</strong>,
+                un restaurante reconocido con estrella Michelin.
 
-            </p>
-
-
-
-            <h3>
-
-              Una vida alrededor de la cocina
-
-            </h3>
-
-
-            <p>
-
-              Para Diego, la cocina se convirtió
-              en mucho más que una profesión.
-
-            </p>
-
-
-            <p>
-
-              Mi formación comenzó en el
-              <strong>
-                Instituto de Turismo de Murcia
-              </strong>,
-              donde estudié Cocina y Sala.
-
-              Después continué con el
-              <strong>
-                Grado Superior de Dirección de Cocina
-                en IES La Flota
-              </strong>.
-
-            </p>
-
-
-            <p>
-
-              A partir de ahí comenzó una etapa
-              de aprendizaje constante, trabajando
-              en diferentes restaurantes y conociendo
-              distintas formas de entender la gastronomía.
-
-            </p>
-
-
-            <p>
-
-              He pasado por
-              <strong>Lima Limón</strong>,
-              donde descubrí la cocina peruana;
-
-              por el
-              <strong>Real Casino de Murcia</strong>,
-              acercándome a la cocina mediterránea;
-
-              por restaurantes ecuatorianos;
-
-              por <strong>Maiko</strong>,
-              donde aprendí de la precisión y filosofía
-              de la cocina japonesa;
-
-              y también por <strong>Almo</strong>,
-              un restaurante reconocido con estrella Michelin.
-
-            </p>
-
-
-            <p>
-
-              Cada cocina me enseñó algo diferente:
-              técnicas, productos, disciplina,
-              creatividad y, sobre todo, una forma
-              distinta de entender lo que significa cocinar.
-
-            </p>
-
-
-            <p>
-
-              Todas esas experiencias forman hoy
-              parte de PACÍFICO.
-
-            </p>
-
-
-
-            <h3>
-
-              Nuestras raíces,
-              nuestra forma de cocinar
-
-            </h3>
-
-
-            <p>
-
-              PACÍFICO nace desde Ecuador,
-              pero también desde nuestra vida en España.
-
-            </p>
-
-
-            <p>
-
-              Queremos mantener viva nuestra identidad
-              y nuestros sabores, pero al mismo tiempo
-              evolucionar, aprender y crear una cocina
-              que refleje todo lo que somos.
-
-            </p>
-
-
-
-            <!-- FRASE CENTRAL -->
-
-            <div class="about-quote">
-
-              <span>
-
-                Ecuador es nuestro origen.
-
-              </span>
-
-
-              <span>
-
-                España es parte de nuestro camino.
-
-              </span>
-
-
-              <strong>
-
-                PACÍFICO es el lugar donde ambos se encuentran.
-
-              </strong>
+              </p>
 
             </div>
 
 
+            <div class="story-image">
+
+              <img
+                src="diego-cocinando.jpg"
+                alt="Diego trabajando como chef en cocina"
+              >
+
+            </div>
+
+          </div>
+
+
+
+          <!-- =================================================
+               BLOQUE RETRATO CHEF
+          ================================================== -->
+
+          <div class="story-career">
+
+
+            <div class="story-image">
+
+              <img
+                src="diego-chef.jpg"
+                alt="Diego, chef de PACÍFICO"
+              >
+
+            </div>
+
+
+            <div class="story-text">
+
+              <h3>
+                Todo lo aprendido forma parte de PACÍFICO.
+              </h3>
+
+
+              <p>
+
+                Cada cocina me enseñó algo diferente:
+                técnicas, productos, disciplina,
+                creatividad y, sobre todo, una forma
+                distinta de entender lo que significa cocinar.
+
+              </p>
+
+
+              <p>
+
+                Todas esas experiencias forman hoy
+                parte de PACÍFICO.
+
+              </p>
+
+
+              <p>
+
+                Queremos mantener viva nuestra identidad
+                y nuestros sabores, pero al mismo tiempo
+                evolucionar, aprender y crear una cocina
+                que refleje todo lo que somos.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- =================================================
+               ECUADOR / ESPAÑA
+          ================================================== -->
+
+          <div class="about-quote">
+
+            <span>
+              Ecuador es nuestro origen.
+            </span>
+
+            <span>
+              España es parte de nuestro camino.
+            </span>
+
+            <strong>
+              PACÍFICO es el lugar donde ambos se encuentran.
+            </strong>
+
+          </div>
+
+
+
+          <!-- =================================================
+               FINAL
+          ================================================== -->
+
+          <div class="story-ending">
+
 
             <h3>
-
-              El sueño continúa
-
+              El sueño continúa.
             </h3>
 
 
@@ -1686,32 +1702,27 @@
 
             <p>
 
-              Es también nuestro reconocimiento a
-              todo lo que hicieron por nosotros,
-              a los sacrificios que asumieron y a
-              la vida que construyeron para que
-              pudiéramos tener oportunidades.
+              Es también nuestro reconocimiento a todo
+              lo que hicieron por nosotros, a los
+              sacrificios que asumieron y a la vida
+              que construyeron para que pudiéramos
+              tener oportunidades.
 
             </p>
 
 
             <p>
 
-              Empezamos con humildad, con muchas
-              ganas de crecer y con la determinación
-              de superarnos cada día.
+              Empezamos con humildad, con muchas ganas
+              de crecer y con la determinación de
+              superarnos cada día.
 
             </p>
 
 
-            <p class="about-final">
+            <p class="final-text">
 
               Porque este no es solamente un restaurante.
-
-            </p>
-
-
-            <p class="about-final strong">
 
               Es una historia familiar que comenzó
               en Ecuador, continuó en España y que
@@ -1722,6 +1733,7 @@
 
           </div>
 
+
         </div>
 
       </div>
@@ -1730,9 +1742,9 @@
 
 
 
-    <!-- =========================
+    <!-- ===================================================
          CARTA
-    ========================== -->
+    ==================================================== -->
 
     <section id="carta">
 
@@ -1777,7 +1789,6 @@
           </div>
 
 
-
           <div class="dish">
 
             <div>
@@ -1798,7 +1809,6 @@
             </div>
 
           </div>
-
 
 
           <div class="dish">
@@ -1823,7 +1833,6 @@
           </div>
 
 
-
           <div class="dish">
 
             <div>
@@ -1846,7 +1855,6 @@
           </div>
 
 
-
           <div class="dish">
 
             <div>
@@ -1867,7 +1875,6 @@
             </div>
 
           </div>
-
 
 
           <div class="dish">
@@ -1900,9 +1907,9 @@
 
 
 
-    <!-- =========================
+    <!-- ===================================================
          PEDIDOS
-    ========================== -->
+    ==================================================== -->
 
     <section id="pedidos">
 
@@ -1924,12 +1931,11 @@
 
         <p class="orders-text">
 
-          Próximamente podrás realizar
-          tus pedidos directamente con nosotros.
+          Próximamente podrás realizar tus pedidos
+          directamente con nosotros.
 
-          Para cualquier consulta,
-          puedes contactar con PACÍFICO
-          por WhatsApp.
+          Para cualquier consulta, puedes contactar
+          con PACÍFICO por WhatsApp.
 
         </p>
 
@@ -1951,9 +1957,9 @@
 
 
 
-    <!-- =========================
+    <!-- ===================================================
          UBICACIÓN
-    ========================== -->
+    ==================================================== -->
 
     <section id="ubicacion">
 
@@ -2002,12 +2008,11 @@
 
 
 
-  <!-- =========================
+  <!-- =====================================================
        FOOTER
-  ========================== -->
+  ====================================================== -->
 
   <footer>
-
 
     <img
       src="logo-pacifico-header.png"
@@ -2022,7 +2027,6 @@
       Todos los derechos reservados.
 
     </p>
-
 
   </footer>
 
