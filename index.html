@@ -1,844 +1,786 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>PACÍFICO — Cocina Ecuatoriana</title>
+  <title>PACÍFICO | Cocina Ecuatoriana</title>
 
-  <meta
-    name="description"
-    content="PACÍFICO — Cocina ecuatoriana con identidad, producto y sabor."
-  >
+  <meta name="description"
+        content="PACÍFICO Cocina Ecuatoriana. Cocina ecuatoriana de autor en Caravaca de la Cruz, Murcia.">
 
   <style>
 
-    /* ========================================
+    /* =========================
        RESET
-    ======================================== */
+    ========================== */
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
       scroll-behavior: smooth;
     }
 
-
-    /* ========================================
-       CUERPO
-    ======================================== */
-
     body {
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+      font-family: Arial, Helvetica, sans-serif;
+      color: #102a43;
       background: transparent;
-
-      color: #102f3a;
-
       line-height: 1.6;
-
-      position: relative;
-
       overflow-x: hidden;
     }
 
 
-    /* ========================================
-       FONDO FOTOGRÁFICO
-    ======================================== */
+    /* =========================
+       FONDO DE LA WEB
+    ========================== */
 
     body::before {
-
       content: "";
-
       position: fixed;
-
       inset: -20px;
 
-      background-image:
-        url("fondo-pacifico.jpg");
-
+      background-image: url("fondo-pacifico.jpg");
       background-size: cover;
-
       background-position: center center;
-
       background-repeat: no-repeat;
 
-      /* SIN DESENFOQUE */
       filter: blur(0px);
-
-      /* MÁS PRESENCIA DE LA FOTOGRAFÍA */
       opacity: 0.42;
 
       z-index: 0;
-
       pointer-events: none;
 
       transform: scale(1.01);
     }
 
-
-    /* ========================================
-       CAPA SUAVE SOBRE LA FOTOGRAFÍA
-    ======================================== */
-
     body::after {
-
       content: "";
-
       position: fixed;
-
       inset: 0;
 
-      /* CAPA CREMA MUCHO MÁS TRANSPARENTE */
-
-      background:
-        rgba(245, 240, 232, 0.08);
+      background: rgba(245, 240, 232, 0.08);
 
       z-index: 0;
-
       pointer-events: none;
     }
 
-
-    /* ========================================
-       CONTENIDO SOBRE EL FONDO
-    ======================================== */
-
     body > * {
-
       position: relative;
-
       z-index: 1;
     }
 
 
-    a {
-
-      color: inherit;
-
-      text-decoration: none;
-    }
-
-
-    /* ========================================
+    /* =========================
        HEADER
-    ======================================== */
+    ========================== */
 
     header {
-
       position: fixed;
-
       top: 0;
-
       left: 0;
-
       width: 100%;
-
-      z-index: 1000;
-
-      background:
-        rgba(245, 240, 232, 0.88);
-
-      backdrop-filter:
-        blur(12px);
-
-      -webkit-backdrop-filter:
-        blur(12px);
-
-      border-bottom:
-        1px solid
-        rgba(16, 47, 58, 0.10);
-    }
-
-
-    nav {
-
-      max-width: 1200px;
-
       height: 100px;
 
+      background: rgba(245, 240, 232, 0.94);
+      backdrop-filter: blur(8px);
+
+      border-bottom: 1px solid rgba(16, 42, 67, 0.08);
+
+      z-index: 1000;
+    }
+
+    .nav {
+      max-width: 1200px;
+      height: 100px;
       margin: auto;
 
-      padding:
-        5px 25px;
+      padding: 0 30px;
 
       display: flex;
-
-      justify-content: space-between;
-
       align-items: center;
+      justify-content: space-between;
     }
 
 
-    /* ========================================
+    /* =========================
        LOGO
-    ======================================== */
+    ========================== */
 
     .logo {
-
-      display: flex;
-
-      align-items: center;
-
-      height: 100%;
-    }
-
-
-    .logo img {
-
+      width: 380px;
       height: 90px;
 
-      width: 380px;
-
-      max-width: 380px;
-
       object-fit: contain;
-
-      object-position: center;
+      object-position: left center;
 
       display: block;
     }
 
 
-    /* ========================================
-       MENÚ
-    ======================================== */
+    /* =========================
+       MENU
+    ========================== */
 
     .menu {
-
       display: flex;
-
-      gap: 28px;
-
       align-items: center;
+      gap: 28px;
+    }
+
+    .menu > a:not(.pedido-btn) {
+      color: #102a43;
+      text-decoration: none;
 
       font-size: 14px;
+      font-weight: 500;
+
+      transition: opacity 0.25s ease;
     }
 
-
-    .menu a {
-
-      transition:
-        opacity 0.2s ease;
-    }
-
-
-    .menu a:hover {
-
+    .menu > a:not(.pedido-btn):hover {
       opacity: 0.55;
     }
 
 
-    .pedido-btn {
+    /* =========================
+       REDES SOCIALES
+    ========================== */
 
-      background: #102f3a;
+    .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
 
-      color: white;
+      margin-right: 2px;
+    }
 
-      padding:
-        11px 18px;
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      border-radius: 30px;
+      width: 22px;
+      height: 22px;
 
-      font-weight: bold;
+      color: #102a43;
+
+      text-decoration: none;
+
+      transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+    }
+
+    .social-icons svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-2px);
+      opacity: 0.6;
     }
 
 
-    /* ========================================
+    /* =========================
+       BOTÓN PEDIR ONLINE
+    ========================== */
+
+    .pedido-btn {
+      background: #102a43;
+      color: #f5f0e8 !important;
+
+      text-decoration: none;
+
+      padding: 11px 20px;
+
+      border-radius: 2px;
+
+      font-size: 13px;
+      font-weight: 600;
+
+      transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .pedido-btn:hover {
+      background: #c5a46d;
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
        HERO
-    ======================================== */
+    ========================== */
 
     .hero {
-
       min-height: 100vh;
 
-      padding:
-        150px 25px 80px;
+      padding: 170px 30px 100px;
 
       display: flex;
-
       align-items: center;
-
       justify-content: center;
 
       text-align: center;
-
-      position: relative;
-
-      background:
-
-        linear-gradient(
-          rgba(245, 240, 232, 0.05),
-          rgba(245, 240, 232, 0.05)
-        ),
-
-        radial-gradient(
-          circle at 50% 35%,
-          rgba(30, 105, 120, 0.06),
-          transparent 40%
-        );
     }
-
 
     .hero-content {
-
-      max-width: 850px;
-
-      position: relative;
-
-      z-index: 2;
+      max-width: 900px;
     }
 
-
-    .eyebrow {
-
-      font-size: 12px;
-
-      letter-spacing: 5px;
-
+    .hero-small {
+      font-size: 13px;
+      letter-spacing: 4px;
       text-transform: uppercase;
 
-      margin-bottom: 25px;
+      margin-bottom: 22px;
 
-      opacity: 0.75;
+      color: #102a43;
     }
 
-
     .hero h1 {
-
-      font-size:
-        clamp(
-          65px,
-          13vw,
-          150px
-        );
-
-      letter-spacing: 12px;
+      font-size: clamp(55px, 10vw, 120px);
 
       line-height: 0.9;
 
-      font-weight: 800;
+      letter-spacing: 8px;
 
-      text-shadow:
-        0 2px 10px
-        rgba(255, 255, 255, 0.45);
+      font-weight: 700;
+
+      margin-bottom: 15px;
     }
 
-
-    .hero h2 {
-
-      margin-top: 25px;
-
-      font-size:
-        clamp(
-          20px,
-          4vw,
-          34px
-        );
-
-      font-weight: 400;
+    .hero-subtitle {
+      font-size: clamp(18px, 3vw, 30px);
 
       letter-spacing: 5px;
+      text-transform: uppercase;
+
+      margin-bottom: 30px;
     }
 
+    .hero-text {
+      max-width: 650px;
 
-    .hero p {
-
-      max-width: 600px;
-
-      margin:
-        30px auto;
+      margin: 0 auto 40px;
 
       font-size: 17px;
 
-      color: #48616a;
+      color: #263f55;
     }
-
-
-    /* ========================================
-       BOTONES HERO
-    ======================================== */
 
     .hero-buttons {
-
       display: flex;
-
       justify-content: center;
-
       gap: 15px;
-
       flex-wrap: wrap;
-
-      margin-top: 35px;
     }
 
-
-    .btn {
-
+    .hero-button {
       display: inline-block;
 
-      padding:
-        15px 28px;
+      padding: 14px 25px;
 
-      border-radius: 30px;
+      border: 1px solid #102a43;
 
-      font-weight: bold;
+      color: #102a43;
 
-      transition:
-        transform 0.2s ease;
+      text-decoration: none;
+
+      font-size: 14px;
+
+      transition: all 0.25s ease;
     }
 
-
-    .btn-primary {
-
-      background: #102f3a;
-
-      color: white;
-    }
-
-
-    .btn-secondary {
-
-      border:
-        1px solid
-        #102f3a;
-
-      background:
-        rgba(255, 255, 255, 0.40);
-    }
-
-
-    .btn:hover {
-
-      transform:
-        translateY(-2px);
-    }
-
-
-    /* ========================================
-       SECCIONES
-    ======================================== */
-
-    section {
-
-      padding:
-        100px 25px;
-
-      position: relative;
-    }
-
-
-    .container {
-
-      max-width: 1100px;
-
-      margin: auto;
-    }
-
-
-    .section-title {
-
-      font-size: 45px;
-
-      margin-bottom: 20px;
-
-      letter-spacing: 2px;
-    }
-
-
-    .section-intro {
-
-      max-width: 650px;
-
-      color: #53666c;
-
-      margin-bottom: 50px;
-    }
-
-
-    /* ========================================
-       CONCEPTO
-    ======================================== */
-
-    .concepto {
-
-      background:
-        rgba(16, 47, 58, 0.97);
-
+    .hero-button:hover {
+      background: #102a43;
       color: #f5f0e8;
     }
 
+    .hero-button.primary {
+      background: #102a43;
+      color: #f5f0e8;
+    }
 
-    .concepto .section-intro {
-
-      color: #d3dddf;
+    .hero-button.primary:hover {
+      background: #c5a46d;
+      border-color: #c5a46d;
     }
 
 
-    .concept-grid {
+    /* =========================
+       SECCIONES
+    ========================== */
 
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 25px;
+    section {
+      padding: 110px 30px;
     }
 
-
-    .concept-card {
-
-      border-top:
-        1px solid
-        rgba(255, 255, 255, 0.35);
-
-      padding-top: 25px;
+    .section-container {
+      max-width: 1100px;
+      margin: auto;
     }
 
+    .section-title {
+      text-align: center;
 
-    .concept-card h3 {
+      margin-bottom: 60px;
+    }
 
-      font-size: 22px;
+    .section-title span {
+      display: block;
+
+      font-size: 12px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 4px;
 
       margin-bottom: 12px;
     }
 
+    .section-title h2 {
+      font-size: clamp(34px, 5vw, 55px);
 
-    .concept-card p {
+      line-height: 1.05;
 
-      color: #c8d4d6;
+      font-weight: 600;
     }
 
 
-    /* ========================================
-       CARTA
-    ======================================== */
+    /* =========================
+       NOSOTROS
+    ========================== */
 
-    #carta {
-
-      background:
-        rgba(245, 240, 232, 0.55);
-
-      backdrop-filter:
-        blur(1px);
+    #concepto {
+      background: rgba(245, 240, 232, 0.82);
     }
 
-
-    .carta-grid {
-
+    .concept-grid {
       display: grid;
 
-      grid-template-columns:
-        repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
 
-      gap: 20px;
+      gap: 25px;
     }
 
+    .concept-card {
+      padding: 35px 30px;
 
-    .plato {
+      background: rgba(255, 255, 255, 0.65);
 
-      border-bottom:
-        1px solid
-        rgba(16, 47, 58, 0.20);
-
-      padding:
-        20px 0;
-
-      display: flex;
-
-      justify-content: space-between;
-
-      gap: 20px;
-    }
-
-
-    .plato h3 {
-
-      font-size: 19px;
-    }
-
-
-    .plato p {
-
-      color: #66777b;
-
-      font-size: 14px;
-    }
-
-
-    .precio {
-
-      font-weight: bold;
-
-      white-space: nowrap;
-    }
-
-
-    /* ========================================
-       PEDIDOS
-    ======================================== */
-
-    .pedidos {
-
-      background:
-        rgba(219, 231, 229, 0.94);
+      border: 1px solid rgba(16, 42, 67, 0.08);
 
       text-align: center;
     }
 
+    .concept-card h3 {
+      margin-bottom: 15px;
 
-    .pedidos .container {
+      font-size: 20px;
+    }
 
-      max-width: 750px;
+    .concept-card p {
+      font-size: 15px;
+
+      color: #40566b;
     }
 
 
-    .pedidos h2 {
+    /* =========================
+       CARTA
+    ========================== */
 
-      font-size: 50px;
-
-      margin-bottom: 20px;
+    #carta {
+      background: rgba(255, 255, 255, 0.72);
     }
 
-
-    .pedidos p {
-
-      margin-bottom: 30px;
-
-      color: #50666b;
-    }
-
-
-    /* ========================================
-       UBICACIÓN
-    ======================================== */
-
-    #ubicacion {
-
-      background:
-        rgba(245, 240, 232, 0.55);
-    }
-
-
-    .ubicacion {
-
+    .menu-grid {
       display: grid;
 
-      grid-template-columns:
-        1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
 
-      gap: 60px;
-
-      align-items: center;
+      gap: 0 60px;
     }
 
+    .dish {
+      display: flex;
 
-    .info-line {
+      justify-content: space-between;
+      align-items: flex-start;
 
-      padding:
-        18px 0;
+      gap: 20px;
 
-      border-bottom:
-        1px solid
-        rgba(16, 47, 58, 0.20);
+      padding: 25px 0;
+
+      border-bottom: 1px solid rgba(16, 42, 67, 0.15);
     }
 
-
-    .info-line strong {
-
-      display: block;
+    .dish h3 {
+      font-size: 18px;
 
       margin-bottom: 5px;
     }
 
+    .dish p {
+      font-size: 13px;
 
-    /* ========================================
+      color: #607285;
+    }
+
+    .price {
+      white-space: nowrap;
+
+      font-weight: 600;
+
+      font-size: 17px;
+    }
+
+
+    /* =========================
+       PEDIDOS
+    ========================== */
+
+    #pedidos {
+      background: rgba(16, 42, 67, 0.94);
+
+      color: #f5f0e8;
+
+      text-align: center;
+    }
+
+    #pedidos .section-title {
+      color: #f5f0e8;
+    }
+
+    .orders-text {
+      max-width: 650px;
+
+      margin: 0 auto 35px;
+
+      color: rgba(245, 240, 232, 0.8);
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+
+      padding: 15px 30px;
+
+      background: #c5a46d;
+
+      color: #102a43;
+
+      text-decoration: none;
+
+      font-weight: 600;
+
+      transition: transform 0.25s ease;
+    }
+
+    .whatsapp-button:hover {
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       UBICACIÓN
+    ========================== */
+
+    #ubicacion {
+      background: rgba(245, 240, 232, 0.82);
+
+      text-align: center;
+    }
+
+    .location-content {
+      max-width: 700px;
+
+      margin: auto;
+    }
+
+    .location-content h3 {
+      font-size: 25px;
+
+      margin-bottom: 15px;
+    }
+
+    .location-content p {
+      margin-bottom: 8px;
+
+      color: #40566b;
+    }
+
+
+    /* =========================
        FOOTER
-    ======================================== */
+    ========================== */
 
     footer {
+      padding: 60px 30px;
 
-      background:
-        #102f3a;
+      background: #102a43;
 
-      color:
-        #dbe7e5;
+      color: #f5f0e8;
 
-      text-align:
-        center;
-
-      padding:
-        50px 25px;
+      text-align: center;
     }
 
+    .footer-logo {
+      width: 260px;
+      max-width: 80%;
 
-    footer .logo {
-
-      margin-bottom:
-        15px;
-
-      justify-content:
-        center;
+      margin-bottom: 25px;
     }
-
-
-    footer .logo img {
-
-      width:
-        300px;
-
-      height:
-        75px;
-    }
-
 
     footer p {
+      font-size: 13px;
 
-      font-size:
-        13px;
-
-      opacity:
-        0.7;
+      color: rgba(245, 240, 232, 0.65);
     }
 
 
-    /* ========================================
-       MÓVIL
-    ======================================== */
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .logo {
+        width: 300px;
+      }
+
+      .menu {
+        gap: 18px;
+      }
+
+      .social-icons {
+        gap: 10px;
+      }
+
+      .concept-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
 
     @media (max-width: 750px) {
 
-
-      nav {
-
-        height:
-          82px;
-
-        padding:
-          5px 18px;
+      header {
+        height: 80px;
       }
 
+      .nav {
+        height: 80px;
+
+        padding: 0 18px;
+      }
+
+      .logo {
+        width: 240px;
+        height: 70px;
+      }
 
       .menu {
-
-        display:
-          none;
+        gap: 12px;
       }
 
-
-      .logo img {
-
-        width:
-          250px;
-
-        max-width:
-          250px;
-
-        height:
-          68px;
+      .menu > a:not(.pedido-btn) {
+        display: none;
       }
 
+      .social-icons {
+        margin-right: 0;
+        gap: 12px;
+      }
+
+      .social-icons a {
+        width: 20px;
+        height: 20px;
+      }
+
+      .social-icons svg {
+        width: 19px;
+        height: 19px;
+      }
+
+      .pedido-btn {
+        padding: 9px 12px;
+
+        font-size: 11px;
+      }
 
       .hero {
-
-        min-height:
-          90vh;
-
-        padding-top:
-          130px;
+        padding-top: 130px;
       }
 
+      section {
+        padding: 80px 20px;
+      }
 
       .hero h1 {
-
-        letter-spacing:
-          6px;
+        letter-spacing: 4px;
       }
 
-
-      .hero h2 {
-
-        letter-spacing:
-          3px;
-      }
-
-
-      .concept-grid,
-      .carta-grid,
-      .ubicacion {
-
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .section-title {
-
-        font-size:
-          36px;
-      }
-
-
-      .pedidos h2 {
-
-        font-size:
-          38px;
-      }
-
-
-      footer .logo img {
-
-        width:
-          240px;
-
-        height:
-          65px;
+      .hero-subtitle {
+        letter-spacing: 3px;
       }
 
     }
 
   </style>
-
 </head>
 
 
 <body>
 
 
-  <!-- =====================================
+  <!-- =========================
        HEADER
-  ====================================== -->
+  ========================== -->
 
   <header>
 
-    <nav>
+    <nav class="nav">
 
-      <a
-        href="#"
-        class="logo"
-      >
-
+      <!-- LOGO -->
+      <a href="#inicio">
         <img
           src="logo-pacifico-header.png"
           alt="PACÍFICO Cocina Ecuatoriana"
+          class="logo"
         >
-
       </a>
 
 
+      <!-- MENU -->
       <div class="menu">
+
+
+        <!-- REDES SOCIALES -->
+
+        <div class="social-icons">
+
+
+          <!-- INSTAGRAM -->
+
+          <a
+            href="https://www.instagram.com/pacifico.cocinafusion"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram PACÍFICO"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+
+              <rect
+                x="3"
+                y="3"
+                width="18"
+                height="18"
+                rx="5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+
+              <circle
+                cx="12"
+                cy="12"
+                r="4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+
+              <circle
+                cx="17.5"
+                cy="6.5"
+                r="1"
+                fill="currentColor"
+              />
+
+            </svg>
+
+          </a>
+
+
+          <!-- TIKTOK -->
+
+          <a
+            href="https://www.tiktok.com/@diego.andrade5426"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok PACÍFICO"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+
+              <path
+                d="M15 3c.3 2.1 1.5 3.5 3.5 4v3
+                c-1.4-.1-2.6-.5-3.5-1.2V15
+                c0 3.5-2.2 5.5-5.5 5.5
+                S4 18.4 4 15.3
+                6.3 10 9.5 10c.3 0 .7 0 1 .1v3.2
+                c-.3-.1-.6-.2-1-.2
+                -1.2 0-2.2.9-2.2 2.2
+                0 1.2 1 2.2 2.2 2.2
+                1.3 0 2.5-1 2.5-2.6V3H15z"
+                fill="currentColor"
+              />
+
+            </svg>
+
+          </a>
+
+
+          <!-- FACEBOOK -->
+
+          <a
+            href="https://www.facebook.com/profile.php?id=61595224251649"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook PACÍFICO"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+
+              <path
+                d="M14 8h3V4.5h-3
+                c-3 0-5 2-5 5V12H6v3.5h3V21h3.5v-5.5H16
+                L16.5 12h-4v-2.2
+                C12.5 8.7 13 8 14 8z"
+                fill="currentColor"
+              />
+
+            </svg>
+
+          </a>
+
+        </div>
+
+
+        <!-- ENLACES DEL MENÚ -->
 
         <a href="#concepto">
           Nosotros
@@ -866,446 +808,416 @@
   </header>
 
 
-  <!-- =====================================
+
+  <!-- =========================
        HERO
-  ====================================== -->
+  ========================== -->
 
-  <section class="hero">
+  <main id="inicio">
 
-    <div class="hero-content">
+    <section class="hero">
 
-      <div class="eyebrow">
-        Cocina ecuatoriana
-      </div>
+      <div class="hero-content">
 
-
-      <h1>
-        PACÍFICO
-      </h1>
-
-
-      <h2>
-        COCINA ECUATORIANA
-      </h2>
-
-
-      <p>
-        Sabores de Ecuador, producto y memoria.
-        Una cocina hecha para disfrutar,
-        compartir y volver.
-      </p>
-
-
-      <div class="hero-buttons">
-
-        <a
-          href="#carta"
-          class="btn btn-primary"
-        >
-          VER CARTA
-        </a>
-
-
-        <a
-          href="#pedidos"
-          class="btn btn-secondary"
-        >
-          PEDIR ONLINE
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================
-       CONCEPTO
-  ====================================== -->
-
-  <section
-    class="concepto"
-    id="concepto"
-  >
-
-    <div class="container">
-
-      <div class="eyebrow">
-        Nuestra identidad
-      </div>
-
-
-      <h2 class="section-title">
-        Ecuador en cada plato.
-      </h2>
-
-
-      <p class="section-intro">
-
-        PACÍFICO nace de una idea sencilla:
-        llevar la cocina ecuatoriana a la mesa
-        con identidad, producto y respeto por
-        sus sabores.
-
-      </p>
-
-
-      <div class="concept-grid">
-
-
-        <div class="concept-card">
-
-          <h3>
-            Producto
-          </h3>
-
-          <p>
-            Ingredientes seleccionados y una
-            cocina pensada para respetar
-            cada producto.
-          </p>
-
+        <div class="hero-small">
+          Cocina ecuatoriana
         </div>
 
-
-        <div class="concept-card">
-
-          <h3>
-            Identidad
-          </h3>
-
-          <p>
-            Recetas ecuatorianas, memoria y
-            sabores que cuentan de dónde venimos.
-          </p>
-
-        </div>
-
-
-        <div class="concept-card">
-
-          <h3>
-            Pacífico
-          </h3>
-
-          <p>
-            Una mirada contemporánea a una
-            gastronomía llena de costa, montaña,
-            tradición y diversidad.
-          </p>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================
-       CARTA
-  ====================================== -->
-
-  <section id="carta">
-
-    <div class="container">
-
-      <div class="eyebrow">
-        Nuestra carta
-      </div>
-
-
-      <h2 class="section-title">
-        Para compartir.
-      </h2>
-
-
-      <p class="section-intro">
-
-        Una selección de clásicos ecuatorianos
-        y platos de PACÍFICO.
-        La carta podrá cambiar según producto
-        y temporada.
-
-      </p>
-
-
-      <div class="carta-grid">
-
-
-        <div class="plato">
-
-          <div>
-
-            <h3>
-              Bolón ranchero
-            </h3>
-
-            <p>
-              Plátano verde, queso y proteína.
-            </p>
-
-          </div>
-
-          <div class="precio">
-            10 €
-          </div>
-
-        </div>
-
-
-        <div class="plato">
-
-          <div>
-
-            <h3>
-              Ceviche ecuatoriano
-            </h3>
-
-            <p>
-              Pescado, cítricos, cebolla y cilantro.
-            </p>
-
-          </div>
-
-          <div class="precio">
-            10 €
-          </div>
-
-        </div>
-
-
-        <div class="plato">
-
-          <div>
-
-            <h3>
-              Chaulafán ecuatoriano
-            </h3>
-
-            <p>
-              Arroz salteado al estilo ecuatoriano.
-            </p>
-
-          </div>
-
-          <div class="precio">
-            10 €
-          </div>
-
-        </div>
-
-
-        <div class="plato">
-
-          <div>
-
-            <h3>
-              Churrasco ecuatoriano
-            </h3>
-
-            <p>
-              Carne, patatas, huevo y acompañamientos.
-            </p>
-
-          </div>
-
-          <div class="precio">
-            15 €
-          </div>
-
-        </div>
-
-
-        <div class="plato">
-
-          <div>
-
-            <h3>
-              Maduro con queso
-            </h3>
-
-            <p>
-              Plátano maduro y queso.
-            </p>
-
-          </div>
-
-          <div class="precio">
-            —
-          </div>
-
-        </div>
-
-
-        <div class="plato">
-
-          <div>
-
-            <h3>
-              Guatita
-            </h3>
-
-            <p>
-              Receta tradicional ecuatoriana.
-            </p>
-
-          </div>
-
-          <div class="precio">
-            —
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================
-       PEDIDOS
-  ====================================== -->
-
-  <section
-    class="pedidos"
-    id="pedidos"
-  >
-
-    <div class="container">
-
-      <div class="eyebrow">
-        PACÍFICO
-      </div>
-
-
-      <h2>
-        Pide tu comida.
-      </h2>
-
-
-      <p>
-        Haz tu pedido directamente por WhatsApp.
-        Te atenderemos y confirmaremos tu pedido.
-      </p>
-
-
-      <a
-        href="https://wa.me/34685898134?text=Hola%20PAC%C3%8DFICO%2C%20quiero%20hacer%20un%20pedido."
-        class="btn btn-primary"
-        target="_blank"
-        rel="noopener"
-      >
-        PEDIR POR WHATSAPP
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================
-       UBICACIÓN
-  ====================================== -->
-
-  <section id="ubicacion">
-
-    <div class="container ubicacion">
-
-
-      <div>
-
-        <div class="eyebrow">
-          Visítanos
-        </div>
-
-
-        <h2 class="section-title">
+        <h1>
           PACÍFICO
-        </h2>
+        </h1>
 
+        <div class="hero-subtitle">
+          Cocina ecuatoriana
+        </div>
 
-        <p class="section-intro">
-          Cocina ecuatoriana para llevar y disfrutar.
+        <p class="hero-text">
+          Una cocina que nace de Ecuador,
+          de sus productos, sus sabores y su identidad,
+          reinterpretada desde una mirada contemporánea.
         </p>
 
-      </div>
+        <div class="hero-buttons">
 
+          <a
+            href="#carta"
+            class="hero-button primary"
+          >
+            Ver carta
+          </a>
 
-      <div>
-
-
-        <div class="info-line">
-
-          <strong>
-            📍 Ubicación
-          </strong>
-
-          Caravaca de la Cruz, Murcia
-
-        </div>
-
-
-        <div class="info-line">
-
-          <strong>
-            🕐 Horarios
-          </strong>
-
-          Próximamente
+          <a
+            href="#pedidos"
+            class="hero-button"
+          >
+            Pedir online
+          </a>
 
         </div>
-
-
-        <div class="info-line">
-
-          <strong>
-            📲 Pedidos
-          </strong>
-
-          Próximamente por WhatsApp
-
-        </div>
-
 
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- =====================================
+
+    <!-- =========================
+         NOSOTROS
+    ========================== -->
+
+    <section id="concepto">
+
+      <div class="section-container">
+
+        <div class="section-title">
+
+          <span>
+            Nuestra esencia
+          </span>
+
+          <h2>
+            Ecuador en cada plato.
+          </h2>
+
+        </div>
+
+
+        <div class="concept-grid">
+
+
+          <div class="concept-card">
+
+            <h3>
+              Producto
+            </h3>
+
+            <p>
+              Ingredientes ecuatorianos,
+              producto fresco y una cocina
+              hecha al momento.
+            </p>
+
+          </div>
+
+
+          <div class="concept-card">
+
+            <h3>
+              Identidad
+            </h3>
+
+            <p>
+              Recetas y sabores que forman
+              parte de la cultura gastronómica
+              del Ecuador.
+            </p>
+
+          </div>
+
+
+          <div class="concept-card">
+
+            <h3>
+              Pacífico
+            </h3>
+
+            <p>
+              Una visión contemporánea de
+              la cocina ecuatoriana pensada
+              para disfrutar y compartir.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CARTA
+    ========================== -->
+
+    <section id="carta">
+
+      <div class="section-container">
+
+        <div class="section-title">
+
+          <span>
+            Selección
+          </span>
+
+          <h2>
+            Nuestra carta
+          </h2>
+
+        </div>
+
+
+        <div class="menu-grid">
+
+
+          <div class="dish">
+
+            <div>
+
+              <h3>
+                Bolón Ranchero
+              </h3>
+
+              <p>
+                Plátano verde, carne guisada,
+                huevo y queso.
+              </p>
+
+            </div>
+
+            <div class="price">
+              10 €
+            </div>
+
+          </div>
+
+
+          <div class="dish">
+
+            <div>
+
+              <h3>
+                Ceviche ecuatoriano
+              </h3>
+
+              <p>
+                Preparación fresca de pescado,
+                cítricos y cebolla.
+              </p>
+
+            </div>
+
+            <div class="price">
+              10 €
+            </div>
+
+          </div>
+
+
+          <div class="dish">
+
+            <div>
+
+              <h3>
+                Chaulafán ecuatoriano
+              </h3>
+
+              <p>
+                Arroz al estilo ecuatoriano
+                con ingredientes seleccionados.
+              </p>
+
+            </div>
+
+            <div class="price">
+              10 €
+            </div>
+
+          </div>
+
+
+          <div class="dish">
+
+            <div>
+
+              <h3>
+                Churrasco ecuatoriano
+              </h3>
+
+              <p>
+                Carne, arroz, patatas,
+                huevo y acompañamientos.
+              </p>
+
+            </div>
+
+            <div class="price">
+              15 €
+            </div>
+
+          </div>
+
+
+          <div class="dish">
+
+            <div>
+
+              <h3>
+                Maduro con queso
+              </h3>
+
+              <p>
+                Plátano maduro acompañado
+                de queso.
+              </p>
+
+            </div>
+
+            <div class="price">
+              —
+            </div>
+
+          </div>
+
+
+          <div class="dish">
+
+            <div>
+
+              <h3>
+                Guatita
+              </h3>
+
+              <p>
+                Preparación tradicional
+                ecuatoriana.
+              </p>
+
+            </div>
+
+            <div class="price">
+              —
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PEDIDOS
+    ========================== -->
+
+    <section id="pedidos">
+
+      <div class="section-container">
+
+        <div class="section-title">
+
+          <span>
+            Take Away
+          </span>
+
+          <h2>
+            Pide PACÍFICO
+          </h2>
+
+        </div>
+
+
+        <p class="orders-text">
+
+          Próximamente podrás realizar
+          tus pedidos directamente con nosotros.
+
+          Para cualquier consulta,
+          puedes contactar con PACÍFICO
+          por WhatsApp.
+
+        </p>
+
+
+        <a
+          href="https://wa.me/34685898134?text=Hola%20PAC%C3%8DFICO%2C%20quiero%20hacer%20un%20pedido."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="whatsapp-button"
+        >
+          Pedir por WhatsApp
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         UBICACIÓN
+    ========================== -->
+
+    <section id="ubicacion">
+
+      <div class="section-container">
+
+        <div class="section-title">
+
+          <span>
+            Visítanos
+          </span>
+
+          <h2>
+            Ubicación
+          </h2>
+
+        </div>
+
+
+        <div class="location-content">
+
+          <h3>
+            Caravaca de la Cruz
+          </h3>
+
+          <p>
+            Murcia, España
+          </p>
+
+          <p>
+            Horario: Próximamente
+          </p>
+
+          <p>
+            Pedidos: Próximamente por WhatsApp
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
        FOOTER
-  ====================================== -->
+  ========================== -->
 
   <footer>
 
-
-    <div class="logo">
-
-      <img
-        src="logo-pacifico-header.png"
-        alt="PACÍFICO Cocina Ecuatoriana"
-      >
-
-    </div>
-
+    <img
+      src="logo-pacifico-header.png"
+      alt="PACÍFICO Cocina Ecuatoriana"
+      class="footer-logo"
+    >
 
     <p>
-      © 2026 PACÍFICO · Cocina Ecuatoriana
+      © 2026 PACÍFICO Cocina Ecuatoriana.
+      Todos los derechos reservados.
     </p>
-
 
   </footer>
 
 
 </body>
-
 </html>
+```
